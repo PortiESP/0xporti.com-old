@@ -1,7 +1,8 @@
+import Link from "next/link"
 import styles from "./NavButton.module.scss"
 
-export default function NavButton({children, borderColor}){
+export default function NavButton({children, borderColor, href}){
 
-    return <button className={styles.button__main} style={{borderColor}}>{children}</button>
+    return <Link className={styles.button__main} style={{borderColor}} href={href}>{children}</Link>
 
 }

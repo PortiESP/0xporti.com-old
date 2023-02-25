@@ -13,8 +13,8 @@ export default function Header(){
                     <Image alt="Logo image" fill={true} src="/assets/Logo.svg"/>
                 </div>
                 <nav>
-                    <NavButton borderColor="#ff2">Blog</NavButton>
-                    <NavButton borderColor="#0af">About</NavButton>
+                    <NavButton borderColor="#ff2" href="/">Blog</NavButton>
+                    <NavButton borderColor="#0af" href="/about">About</NavButton>
                 </nav>
             </div>
             <div className={styles.div__quote}>
