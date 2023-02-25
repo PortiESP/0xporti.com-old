@@ -13,10 +13,10 @@
     
     filter: brightness(70%);
 
-    transition: all .2s ease;
+    transition: all .1s ease;
     
     &:hover{
-        border-bottom:4px solid;
+        outline:4px solid;
         filter: none;
     }
 

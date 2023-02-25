@@ -1,4 +1,5 @@
 
+import BlogPostsGrid from "./LandingComponents/BlogPosts/BlogPosts"
 import Footer from "./LandingComponents/Footer/Footer"
 import Header from "./LandingComponents/Header/Header"
 import SearchBar from "./LandingComponents/SearchBar/SearchBar"
@@ -12,7 +13,7 @@ export default function Landing() {
         <Header />
         <SearchBar />
 
-        {/* Posts section */}
+        <BlogPostsGrid />
 
         <Footer />
       </div>
