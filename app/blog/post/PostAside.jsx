@@ -14,19 +14,21 @@ export default function PostAside(){
                 <SocialButtons/>
             </div>
 
-            <div className={sass.div__aside_featured} onClick={()=> window.location.href = "/blog/" + featuredPostData.id}>
-                    <div className={sass.div__featured}>
-                        <div className={sass.div__featured_image}>
-                            <Image src={featuredPostData.image} alt="Featured img" layout="fill" objectFit="cover"/>
-                            <Image src={featuredPostData.image} alt="Featured img" layout="fill" objectFit="contain"/>
+            <Link href={"/blog/post/" + featuredPostData.id}>
+                <div className={sass.div__aside_featured}>
+                        <div className={sass.div__featured}>
+                            <div className={sass.div__featured_image}>
+                                <Image src={featuredPostData.image} alt="Featured img" layout="fill" objectFit="cover"/>
+                                <Image src={featuredPostData.image} alt="Featured img" layout="fill" objectFit="contain"/>
+                            </div>
+                            <div className={sass.div__featured_data}>
+                                <h2>{featuredPostData.title}</h2>
+                                <p>{featuredPostData.description}</p>
+                            </div>
+                            <span className={sass.span__featured}><i>Featured post:</i></span>
                         </div>
-                        <div className={sass.div__featured_data}>
-                            <h2>{featuredPostData.title}</h2>
-                            <p>{featuredPostData.description}</p>
-                        </div>
-                        <span className={sass.span__featured}><i>Featured post:</i></span>
-                    </div>
-            </div>
+                </div>
+            </Link>
         </div>
     )
 }

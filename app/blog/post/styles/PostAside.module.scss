@@ -12,7 +12,11 @@
     justify-content: flex-start;
     align-items: flex-end;
     height: 100vh;
-    
+ 
+    & > a{
+        width: 100%;
+        margin-top: 50px;
+    }
 }
 
 .div__aside_featured{

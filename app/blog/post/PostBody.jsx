@@ -10,8 +10,8 @@ export default function PostBody(props){
     return (
         <>
             <div className={sass.div__body_wrap}>
-                <PostMainContent metadata={props.metadata[0]} content={props.content}/>
-                {/* <PostAside /> */}
+                <PostMainContent metadata={props.metadata} content={props.children}/>
+                <PostAside />
             </div>
             <JumpUpButton />
         </>

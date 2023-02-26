@@ -1,33 +1,23 @@
-
+'use client'
 
 import PostBody from "./PostBody"
-import Head from "next/head"
 import Header from "@/components/header/Header"
+import {usePathname} from "next/navigation"
+import metadataList from "@/api/blog/postData"
 
 
-
-const fetchPostMetadata = (id) => {
-    return fetch(`http://localhost:3000/api/blog/posts?id=${id}`)
-                        .then(res => res.json())
-}
 
 
 // The code that will be nested into the MainContent
-export default async function PostPage(props){
-
-    const metadata = await fetchPostMetadata(props.params.postId)
+export default function PostPage(props){
+    
+    const id = usePathname().split('/')[3] || ''
+    const metadata = metadataList[metadataList.indexOf(metadataList.filter( post => post.id === id)[0])]
 
     return (
         <>
-            <Head>
-                <title>{metadata && metadata.title + " - [porti.dev]" || ""}</title>
-                <meta name="description" content={metadata.description || "Default decription"}/>
-                <meta name="keywords" content={(metadata.keywords || []).concat(metadata.category || []).concat('Porti')} />
-                <meta name="author" content={metadata.author || "Porti"} />
-            </Head>
             <Header title="BLOG" />
-            <PostBody metadata={metadata} content={props.children}/>
-            
+            <PostBody metadata={metadata}>{props.children}</PostBody>
         </>
     )
 }
