@@ -4,7 +4,7 @@ import image1 from "@/blogImages/postsImages/github_submodules/githubscreenshoot
 import image2 from "@/blogImages/postsImages/github_submodules/githubscreenshoot.png"
 
 
-export default(
+export default function Page(){ return(
     <>
         <Title>Empty external repos bug in github</Title>
 
@@ -58,4 +58,4 @@ export default(
 
         </Section>
     </>
-)
+)}

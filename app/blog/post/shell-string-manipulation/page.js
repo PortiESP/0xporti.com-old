@@ -43,7 +43,7 @@ const sections = [
    
 ]
 
-export default (<>
+export default function Page(){ return (<>
 
     <Title>String manipulation with terminal commands</Title>
 
@@ -485,4 +485,4 @@ export default (<>
     <BubbleScrollBar sections={sections}/>
 
 
-</>)
+</>)}

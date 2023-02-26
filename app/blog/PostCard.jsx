@@ -12,7 +12,7 @@ export default function PostCard(props){
 
     return (
         <div className={sass.div__postCard_wrap}>
-            <a href={`/blog/${props.id}`} onClick={()=> console.log("click")}>
+            <a href={`/blog/post/${props.id}`} onClick={()=> console.log("click")}>
                 
                 <div className={sass.div__card_image} onClick={setLoadingPointer}>
                     <Image src={imageData} alt="Post thumnail" layout="fill" objectFit="cover" style={{filter: "blur(4px)"}}/>

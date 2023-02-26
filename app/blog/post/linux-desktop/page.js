@@ -3,7 +3,7 @@ import { Gray } from "@/components/MarkupWidgets/tags/Colors";
 
 
 
-export default (
+export default function Page(){ return (
     <>
         <Title>Install a desktop GUI on linux</Title>
 
@@ -80,4 +80,4 @@ export default (
             <Callout>🎉 Congratulations 🎉, you desktop is now installed and working</Callout>
         </Section>
     </>
-)
+)}

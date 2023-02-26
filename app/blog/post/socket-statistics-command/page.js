@@ -1,7 +1,7 @@
 import {Title, Title2, Title3, Title4, Paragraph, Callout, UList, Img, Code, Block, Section} from "@/components/MarkupWidgets/Tags.js"
 
 
-export default (<>
+export default function Page(){ return (<>
     <Title>Scan local open ports</Title>
 
     <Section title="Overview">
@@ -102,4 +102,4 @@ export default (<>
 
 
 
-</>)
+</>)}

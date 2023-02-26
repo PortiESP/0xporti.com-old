@@ -1,7 +1,7 @@
 import {Title, Title2, Title4, Paragraph, UList, Code, Section} from "@/components/MarkupWidgets/Tags.js"
 
 
-export default (
+export default function Page(){ return (
     <>
         <Title>Query JSON files from the terminal CLI {"(jq)"}</Title>
 
@@ -134,4 +134,4 @@ $ cat test.json
 
 
     </>
-)
+)}

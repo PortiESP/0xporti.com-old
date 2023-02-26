@@ -22,7 +22,7 @@ const sections = [
 ]
 
 
-export default <>
+export default function Page() { return (<>
 
     <Title>How to encrypt a partition with LUKS in Linux</Title>
 
@@ -201,5 +201,5 @@ export default <>
 
 
     <BubbleScrollBar sections={sections} />
-</>
+</>)}
 

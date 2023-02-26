@@ -41,7 +41,7 @@ const sections = [
     }
 ]
 
-export default (
+export default function Page(){ return (
     <>
 
         <Title>How did I built my website 😎</Title>
@@ -244,4 +244,4 @@ export default (
 
         <BubbleScrollBar sections={sections}/>
     </>
-)
+)}
