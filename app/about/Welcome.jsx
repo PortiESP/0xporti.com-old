@@ -16,7 +16,7 @@ export default function Welcome(){
             <div className={sass.div__welcome_wrap}>
                 <div className={sass.div__name}><h1>PORTI</h1><h3>{"// Full-Stack & software developer"}</h3></div>
                 <div className={sass.div__separator}></div>
-                <div className={sass.div__image}><Image src={profilePic} className={sass.image_profile}  alt="Profile pic" priority/></div>
+                <div className={sass.div__image}><Image src={profilePic} className={sass.image_profile} fill alt="Profile pic" priority/></div>
             </div>
             
             <div className={sass.div__social}>

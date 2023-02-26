@@ -3,7 +3,7 @@
 .h2__title{
     margin-top: 25vh;
     text-align: center;
-   font-size: 6vw;
+   font-size: 8rem;
    color: white;
    padding: 0;
 }
@@ -135,7 +135,12 @@
 
 
 @media (max-width: 1100px){
+    .h2__title{
+        font-size: 3em;
+    }
+
     .section__skills_wrap{
+
         
         & .div__skills{
             flex-direction: column;
@@ -159,19 +164,6 @@
             width: 100%;
             height: auto;
 
-            // &::before{
-            //     content: "My skills";
-            //     position: absolute;
-            //     width: 85vw;
-            //     top: -60px;
-            //     color: #bbb;
-            //     background: #4448;
-            //     text-align: center;
-            //     font-size: 2em;
-            //     font-family: inherit;
-            //     font-weight: 600;
-
-            // }
         }
         & .div__icons_group{
             display:contents;

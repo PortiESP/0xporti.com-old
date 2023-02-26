@@ -6,19 +6,23 @@
 }
 
 .div__thumbnail{
+    position: relative;
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: 100px;
-    position: relative;
+    
     width: 80%;
+    
+    margin-top: 100px;
     margin:auto;
     border-radius: 4px;
-    max-height: 40vh;
 
     overflow: hidden;
 
-    
+    & img{
+        object-fit: contain;
+        outline: 10px solid red;
+    }    
     
 }
 
@@ -43,6 +47,7 @@
 
         & .div__thumbnail{
             margin: 50px auto 0;
+            height: 150px !important;
         }
 
         & .div__mainContent{
