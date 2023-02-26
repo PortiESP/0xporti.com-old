@@ -46,7 +46,7 @@ export default function Body(){
                                     Object.entries(categoriesStyle).map( (pair, i) => <span key={i} className={sass.span__filter} 
                                         style={pair[1]}
                                         onClick={ () => setSearchFilters( old =>  [ ...old, ["category", pair[0]] ]) }
-                                        >{pair[0]}</span>
+                                        >#{pair[0]}</span>
                                     )
                                 }
                             </div>
@@ -56,7 +56,7 @@ export default function Body(){
                         searchFilters.map( (pair,i) => <span key={i} className={sass.span__filter} 
                                                     style={categoriesStyle[pair[1]]}
                                                     onClick={ ()=> setSearchFilters( old =>  [...old].filter( data => data[1] !== pair[1]) ) }
-                                                    >{pair[1]}</span>
+                                                    >#{pair[1]}</span>
                                         )
                     }
                 </div>

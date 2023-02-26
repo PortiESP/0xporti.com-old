@@ -77,7 +77,7 @@
         display: grid;
         // justify-content: center;
         // flex-wrap: wrap;
-        gap: 40px;
+        gap: 50px;
         grid-template-columns: 1fr 1fr;
         padding-top: 20px;
         width: 85%;
@@ -100,8 +100,12 @@
 
     }
     & .div__filters{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
         position: relative;
         padding-bottom: 4px;
+        word-wrap: break-word;
 
 
         & .div__addFilter{
@@ -132,18 +136,30 @@
 
                 &.addfilterfocus{
                     height: 20px;
-                    background: #222;
+                    background: #333;
                     color: #bbb;
                     font-style: italic;
+                    &:hover{
+                        background: #444;
+                    }
                 }
             }
         }
 
-        & > .span__filter{
-            color: #eee;
-            padding: 2px 10px;
-            border-radius: 20px;
-            margin: 10px 5px;
+        & .span__filter{
+            color: $white;
+            background-color: hsla(0, 0%, 64%, .4);
+            
+            padding: 4px 10px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            font-weight: 500;
+            cursor: pointer;
+            
+            &:hover{
+                filter: brightness(60%);
+            }
+            
         }
 
         
@@ -153,9 +169,12 @@
 
 
 .div__filterSelect{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
     position: absolute;
-    top: 35px;
-    background-color: #484848;
+    top: 40px;
+    background-color: #333e;
     padding: 10px;
     width: 100%;
     border-radius: 10px;
@@ -163,13 +182,10 @@
     
     z-index: 1;
 
-    & .span__filter{
-        color: #eee;
-        display: inline-block;
-        padding: 2px 10px;
-        border-radius: 20px;
-        margin: 5px;
+    & .span__filter:hover{
+        filter:brightness(140%) ;
     }
+
 }
 
 
