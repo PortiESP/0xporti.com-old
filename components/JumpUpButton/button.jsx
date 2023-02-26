@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image"
 import { useEffect, useState } from "react"
 import Icon from "./assets/arrow_icon.svg"

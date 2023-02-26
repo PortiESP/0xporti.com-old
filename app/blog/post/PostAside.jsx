@@ -1,4 +1,4 @@
-import sass from "@/styles/blog/post/PostAside.module.scss"
+import sass from "./styles/PostAside.module.scss"
 import Image from "next/image"
 import {featuredPostData} from "@/api/blog/featured"
 import SocialButtons from "@/components/SocialButtons/SocialButtons"

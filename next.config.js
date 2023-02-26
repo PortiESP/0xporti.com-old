@@ -3,6 +3,9 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  images: {
+    domains: ["i.gyazo.com", "cdn.jsdelivr.net"]
+  },
   async redirects() {
     return [
       {
