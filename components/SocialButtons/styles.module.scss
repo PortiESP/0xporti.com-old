@@ -1,0 +1,25 @@
+
+.div__social_buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+
+    background-color: #333a;
+    border-radius: 20px;
+
+    & > div{
+        width: 75px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 200ms ease;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(110%) rotateZ(10deg);
+        }
+    }
+    
+}

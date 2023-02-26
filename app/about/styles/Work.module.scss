@@ -1,0 +1,166 @@
+@import "../../identity";
+
+
+.section__work{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    padding-bottom: 200px;
+
+}
+.h__title{
+    color: #eee;
+    font-size: 8rem;
+    padding: 50px;
+}
+
+// Card holder
+.div__work_cards{
+    width: 80vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    gap:20px;
+    justify-content: center;
+    justify-items: center;
+
+    cursor:pointer;
+}
+
+// Card
+.div__workCard{
+    position: relative;
+    width: 400px;
+    height: 400px;
+
+
+    & .div__image{
+        position: relative;
+        width: 100%;
+        height: 400px;
+        filter: brightness(50%);
+    }
+
+    & .div__data{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        font-size: 1rem;
+        
+        color: #eee;
+        transition: color 1s ease, background .5s ease;
+        overflow: hidden;
+        
+        & *{
+            z-index: 2;
+        }
+
+        & h4{
+            position: relative;
+            font-size: 2.6em;
+            margin: 20px 0;
+        }
+        & p{
+            position: relative;
+            font-size: 1em;
+            color: #ddd;
+        }
+        & span{
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-weight: 300;
+            font-style: italic;
+            color: #bbb;
+        }
+        
+        & .div__bubble{
+            position: absolute;
+            bottom: 0; 
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #eee;
+            
+            transition: clip-path .8s ease;
+            
+            z-index: 1;
+            
+            
+
+        }
+        &:hover{
+            color: black;
+            & p{
+                color: #222;
+            }
+            & span{
+                color: #333;
+            }
+            & .div__bubble{
+                clip-path: circle(150% at var(--circlePosX) var(--circlePosY));
+            }
+        }
+        
+    }
+}
+
+
+
+@media (max-width: 1000px){
+    .section__work{
+        & .div__work{
+            // position: relative;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 50px;
+            padding: 10px;
+        }
+
+        & .div__work_cards{
+            width: 90vw;
+        }
+        
+        & .div__workCard{
+            width: 80vw;
+            height: 80vw;
+
+            & .div__image{
+                height: 80vw;
+            }
+
+            & .div__data{
+
+                font-size: .9rem;
+
+                &:hover{
+                    color: black;
+                    & .div__bubble{
+                        clip-path: none;
+                    }
+                }
+                &.focus{
+                    color: black;
+                    background-color: #eee;
+                    & p{
+                        color: #222;
+                    }
+                }
+                
+            }
+
+        }
+        
+    }
+    .h__title{
+        font-size: 4rem;
+
+    }
+}

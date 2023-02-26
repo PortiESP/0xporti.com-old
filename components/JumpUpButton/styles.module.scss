@@ -1,0 +1,26 @@
+
+
+.div__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 50%;
+    background-color: #eee; 
+
+    transition: opacity .5s ease;
+    opacity: 0;
+
+    & .div__image{
+        position: relative;
+        width: 65%;
+        height: 65%;
+    }
+    &.show{
+        opacity: 1;
+    }
+}

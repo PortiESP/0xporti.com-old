@@ -1,0 +1,182 @@
+@import "../../identity";
+
+.h2__title{
+    margin-top: 25vh;
+    text-align: center;
+   font-size: 6vw;
+   color: white;
+   padding: 0;
+}
+
+.section__skills_wrap{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 50px 0;
+    gap: 100px;
+    margin-bottom: 200px;
+    
+    scroll-snap-align: start;
+
+}
+
+.div__skills{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+    width: 80%;
+    
+    
+}
+
+.div__skillCard{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    color: $white;
+    margin: 0 40px;
+    text-align: center;
+    
+    & hr {
+        width: 80%;
+        height: 3px;
+        border: none;
+        background-color: $lightGray;
+        margin-bottom: 20px;
+    }
+    
+    & > img {
+        filter: invert(100%);
+        margin-bottom: 20px !important;
+    }
+
+    & h4 {
+        
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    
+    & p {
+        color: $lightGray;
+    }
+}
+
+
+.div__icons_groups{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+}
+
+.div__icons_group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    width: 100%;
+    // height: 100px;
+
+    // background: #aaa2;
+}
+
+
+.div__icon{
+    --bright: 400%;
+    --scale: 70%;
+    --invert: 0;
+
+    position: relative;
+    width: 80px;
+    height: 80px;
+    
+    background: #aaa2;
+    
+    // border-radius: 10px;
+    filter: brightness(80%);
+    transition: all .2s ease;
+
+    &:hover{
+        transform: scale(120%);
+    }
+    
+    & > img{
+        filter: grayscale(1) brightness(var(--bright));
+        transform: scale(var(--scale));
+    }
+    &.invert > img{ filter: grayscale(1) brightness(var(--bright)) invert(1); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1450px){
+    .div__icons_groups{
+        height: 80vh;
+    }
+}
+
+
+@media (max-width: 1100px){
+    .section__skills_wrap{
+        
+        & .div__skills{
+            flex-direction: column;
+            align-items: center;
+
+        }
+        & .div__skillCard{
+            padding-top: 20px;
+            margin: 0;
+        }
+
+
+        & .div__icons_groups{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0px;
+            width: 100%;
+            height: auto;
+
+            // &::before{
+            //     content: "My skills";
+            //     position: absolute;
+            //     width: 85vw;
+            //     top: -60px;
+            //     color: #bbb;
+            //     background: #4448;
+            //     text-align: center;
+            //     font-size: 2em;
+            //     font-family: inherit;
+            //     font-weight: 600;
+
+            // }
+        }
+        & .div__icons_group{
+            display:contents;
+            
+        }
+    }
+
+}

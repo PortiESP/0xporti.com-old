@@ -1,8 +1,17 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/assets/*": ["/public/assets/*"]
-    }
-  }
+        "compilerOptions":{
+                "baseUrl": ".", // Set root for absolute paths
+                "paths": { // Create variable for paths: "@/myVar/*" matches "components/layout/*"
+                        "@/assets/*": ["./public/assets/*"],
+                        "@/components/*": ["./components/*"],
+                        "@/styles/*": ["./styles/*"],
+                        "@/public/*": ["./public/*"],
+                        "@/api/*": ["./pages/api/*"],
+                        "@/blogImages/*": ["./public/assets/blog/*"],
+                        "@/postsImages/*": ["./public/assets/blog/postsImages/*"]
+                },
+        },
+        "exclude": [
+                "node_modules"
+        ]
 }

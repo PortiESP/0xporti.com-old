@@ -1,0 +1,109 @@
+@import "../../app/identity";
+
+
+
+.div__footer_wrap{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+
+    // box-shadow: 0px 0 10px 0 black;
+    background: $postBackground;
+    font-size: 1rem;
+    padding: 40px 10px;
+
+    // min-height: 200px;
+    min-height: 100vh;
+
+}
+
+.div__footer_data{
+    padding: 40px 0 10px 0;
+    color: #fff;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    gap: 10px;
+
+    height: 90vh;
+    border-top: 2px solid #333;
+    width: 50%;
+
+    & .name{
+        color: rgb(255, 230, 0);
+    }
+    
+
+    & .copyright{
+        font-size: .9em;
+        color: #888;
+    }
+
+    & .msg1{
+        padding: 10px 0;
+        color: gray;
+        font-style: italic;
+        font-size: .7em;
+        width: 80vw;
+        max-width: 600px;
+    }
+}
+
+
+.div__social_icons{
+    position: absolute;
+    bottom: 100px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    & .div__social_icon{
+        --size: 28px;
+        width: var(--size);
+        height: var(--size);
+
+        object-fit: contain;
+
+        
+        transition: all .3s ease;
+        
+        &:nth-child(1){
+            filter: invert(.7) ;
+        }
+        &:nth-child(2){
+            filter: invert(.7);
+        }
+        &:nth-child(3){
+            filter: brightness(70%);
+        }
+        
+        &:hover{
+            &:nth-child(1){
+                filter: invert(100) drop-shadow( 0 5px 4px black);
+            }
+            &:nth-child(2){
+                filter: invert(100) drop-shadow( 0 5px 4px black);
+            }
+            &:nth-child(3){
+                filter: brightness(100%) drop-shadow( 0 5px 2px black);
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 1100px){
+    .div__footer_data{
+        width: 70%;
+        padding: 20px;
+    }
+}
