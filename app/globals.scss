@@ -5,9 +5,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    & *::selection{
+        color: #111;
+        background-color: rgb(235, 180, 0);
+        
+    }
 }
 
 html, body{
     background: $BackgroundTexture;
     font-family: $MainFont, "Arial";
+}
+
+html {
+    font-family: $font1;
+    scrollbar-width: none;
+    // scroll-behavior: smooth;
+
+}  
+body{
+    scroll-behavior: smooth;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
 }

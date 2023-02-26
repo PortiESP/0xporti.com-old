@@ -1,0 +1,237 @@
+@import "../../identity";
+
+
+.div__header_wrap{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 10vw;
+
+    background-color: $gray;
+    box-shadow: 0 0px 20px 2px black;
+
+    z-index: 1;
+}
+
+// Main Containers --------------------------------------
+.div__hero_wrap{
+    width: 35%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.div__featured_wrap{
+    width: 65%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Component comtainer --------------------------------------
+.div__header_wrap h1{
+    font-size: 14vw;
+    text-align: center;
+    color: $white;
+}
+.div__featured{
+    position: relative;
+    
+    max-width: 50vw;
+    
+    cursor: pointer;
+
+    & > a {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    & .div__featured_image{
+        transition: all .3s ease;
+        
+        filter: brightness(80%);
+        
+        
+        & span{
+            overflow: visible !important;
+        }
+        
+        & img{
+            border-radius: 20px;
+            box-shadow: 0 0 10px 0 black;
+        }
+        
+    }
+    
+    & .div__featured_data{        
+        
+        // --diagonalOffset: 30px;
+        
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        font-size: 1rem;
+
+        filter: drop-shadow(0 0 10px black);
+        
+        padding: 30px;
+        
+        color: $white;
+        text-shadow: 0px 0px 4px black;
+        text-align: end;
+        
+        
+        & h2{
+            transition: all .3s ease;
+            font-size: 2em;
+            
+        }
+        & p{
+            font-size: 1em;
+            filter: brightness(95%);
+        }
+    }
+
+    & .span__featured{
+        position: absolute;
+        top:-20px;
+        left: 40px;
+        padding: 4px 30px;
+
+        box-shadow: 0 0 10px 0 black;
+        border: 1px solid red;
+        background-color: $gray;
+        color: $white;
+        font-weight: 500;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        
+        
+    }
+    
+    &:hover{
+        
+        & .div__featured_image{
+            filter: brightness(10%);
+            // transform: translateY(-100px);
+        }
+        
+        & .div__featured_data{
+            h2{
+                font-size: 3em;
+
+            }
+        }  
+
+    }
+}
+
+// Props
+.div__hero_wrap{
+    z-index: 10;
+}
+.div__featured_wrap{
+    z-index: 10;
+}
+.div__props_wrap{
+    z-index: 1;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+
+    .prop1_wrap{
+        position: relative;
+        width: 50%;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) ;
+        
+        // overflow: hidden;
+
+        & .prop1{
+        position: relative;
+        // top: 
+        left: -100%;
+        width: 100vw;
+        height: 300vh;
+        background-color: $lightGray;
+        opacity: .2;
+        margin-left: auto;
+        transform: rotateZ(30deg);
+        }
+    }
+
+}
+
+
+
+@media (max-width: 800px){   
+    .div__header_wrap{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        
+        & .div__hero_wrap{
+            justify-content: center;
+            height: 70%;
+            max-height: 325px;
+            & h1{
+                font-size: 35vw;
+            }
+        }
+        & .div__featured_wrap{
+            height: 100%;
+            width: 90vw;
+            // max-width: 600px;
+
+            & .div__featured{
+                max-width: none;
+                width: 80vw;
+                justify-content: flex-start;
+                
+                & .div__featured_image{
+                    // display: none;
+                    filter: none;
+                    // min-height: 30vh;
+                }
+
+                & h2{
+                    font-size: 6vw;
+                }
+
+                & .div__featured_data{
+                    position: static;
+                    padding: 10px;
+                    filter: none;
+                }
+
+                & .span__featured{
+                    left: 20px;
+                    padding: 2px 20px;
+                    font-size: 1em;
+                }
+                
+                &:hover .div__featured_data{
+                    transform: none;
+                }
+            }
+        }
+    }
+}

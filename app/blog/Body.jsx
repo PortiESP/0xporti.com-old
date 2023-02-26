@@ -1,4 +1,6 @@
-import sass from "@/styles/blog/Body.module.scss"
+'use client'
+
+import sass from "./styles/Body.module.scss"
 import PostCard from "./PostCard" // Component
 import React, {useState, useEffect} from "react"
 // API Data

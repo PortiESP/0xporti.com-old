@@ -1,0 +1,12 @@
+@import "../../identity";
+
+
+
+.div__body_wrap{
+    display: flex;
+    background-color: $postBackground;
+    position: relative;
+
+    // DEBUG
+    min-height: 100vh;
+}

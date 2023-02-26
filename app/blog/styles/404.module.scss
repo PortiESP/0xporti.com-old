@@ -1,0 +1,62 @@
+@import "../../identity";
+
+.div__wrapper{
+    height: 100vh;
+    background: $darkGray;
+
+}
+
+.div__body{
+    width: 50vw;
+    height: 92%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.div__body{
+
+    text-align: center;
+
+    & h2{
+        color: #eee;
+        font-weight: 500;
+        font-size: 2em;
+        line-height: 100%;
+        margin-bottom: 10px;
+    }
+    & hr{
+        width: 50%;
+    }
+    & p{
+        text-align: center;
+        padding: 10px 0;
+        color: #888;
+        font-size: .7em;
+        margin-bottom: 10px;
+    }
+    & .div__buttons{
+
+        & button{
+            margin: 0 50px;
+            padding: 8px 20px;
+            background-color: #eee;
+            border: none;
+            border-radius: 10px;
+            font-size: .8;
+            font-family: inherit;
+            font-weight: 700;
+
+            &:nth-child(2){
+                background-color: rgb(255, 166, 0);
+                color: black;
+            }
+    
+        }
+    }
+
+}

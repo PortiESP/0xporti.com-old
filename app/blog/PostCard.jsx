@@ -1,4 +1,4 @@
-import sass from "@/styles/blog/PostCard.module.scss"
+import sass from "./styles/PostCard.module.scss"
 import Image from "next/image"
 import { categoriesStyle } from "@/api/blog/categoriesStyle"
 

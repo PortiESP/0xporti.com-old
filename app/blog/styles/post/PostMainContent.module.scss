@@ -1,0 +1,58 @@
+@import "../../identity";
+
+
+.div__mainContent_wrap{
+    width: 70%;
+}
+
+.div__thumbnail{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 100px;
+    position: relative;
+    width: 80%;
+    margin: 100px auto 0;
+    border-radius: 4px;
+    max-height: 40vh;
+
+    overflow: hidden;
+
+    
+    
+}
+
+.div__mainContent{
+    position: relative;
+    margin: 20px auto;
+    width: 80%;
+    padding: 0;
+
+    border-radius: 4px;
+
+}
+
+
+
+
+
+
+@media (max-width: 1100px){
+    .div__mainContent_wrap{
+        width: 100%;
+
+        & .div__thumbnail{
+            margin: 50px auto 0;
+        }
+
+        & .div__mainContent{
+            margin: 10px auto;
+            width: 92vw;
+
+            & h1{font-size: 2.2rem;}
+            & h2{font-size: 1.8rem;}
+            & h3{font-size: 1.4rem;}
+            & h4{font-size: 1rem;}
+        }
+    }
+}

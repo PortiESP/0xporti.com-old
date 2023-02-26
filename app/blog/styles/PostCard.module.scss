@@ -1,0 +1,157 @@
+@import "../../identity";
+
+.div__postCard_wrap{
+    position: relative;
+    
+    --borderRadius: 6px;
+    border-radius: var(--borderRadius);
+    background-color: rgb(68, 68, 68);
+
+    & > a{
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    // Card height and content proportions
+    & .div__card_image{
+        min-height: 300px;
+    }
+    & .div__card_data{
+        height: 50%;
+    }
+    & .div__card_category{
+        align-self: flex-end;
+        // padding-right: 6px;
+        // height: 40px;
+    }
+
+    
+    &:hover{
+        & .div__card_image{
+            filter: brightness(50%);
+        }
+        
+        & .div__card_data{
+            transform: translateX(-10px);
+        }  
+
+    }
+    
+}
+
+// ==================================================== Post image
+.div__card_image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    overflow: hidden ;
+    border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+
+    transition: all .2s ease;
+    
+}
+
+// ==================================================== Post data 
+.div__card_data{        
+        
+    --diagonalOffset: 30px;
+    
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+
+    padding: 30px;
+    color: $white;
+    transition: all .3s ease;
+    
+    
+    & h2{
+        font-size: 2.4rem;
+        
+    }
+    & p{
+        color: $lightGray;
+    }
+}
+// ==================================================== Post category
+.div__card_category{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 95%;
+    margin: auto;
+    padding: 10px;
+    gap: 6px;
+
+    border-top: 2px solid rgba(112, 112, 112, 0.2);
+
+    & .div__category{
+        color: $white;
+        background-color: hsla(0, 0%, 64%, .4);
+        
+        padding: 2px 12px;
+        border-radius: 25px;
+        cursor: pointer;
+        
+        &:hover{
+            filter:brightness(80%) ;
+            opacity: 1;
+        }
+        
+    }
+} 
+
+// ==================================================== Post label 
+.span__label{
+    position: absolute;
+    top:-20px;
+    left: 40px;
+    padding: 4px 30px;
+    
+    box-shadow: 0 0 10px 0 black;
+    border: 1px solid red;
+    background-color: $gray;
+    color: $white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    font-style: italic;
+    
+    
+}
+
+
+
+
+@media (max-width: 500px){
+    .div__postCard_wrap{
+        & .div__card_image{
+            min-height: 110px;
+        }
+    }
+
+    .div__card_data{
+        padding: 20px;
+        & h2{
+            font-size: 1.6rem;
+        }
+    }
+    .div__card_category{
+        font-size: .9rem;
+    }
+}

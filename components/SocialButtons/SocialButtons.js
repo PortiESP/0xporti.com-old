@@ -14,7 +14,7 @@ export default function SocialButtons(){
                 <GithubButton username="PortiESP" bubble mini/>
             </div>
             <div>
-                <Button href="/" color="black" mini iconScale="120%" background="#F2Cd00" icon={blogIcon} />
+                <Button href="/blog" color="black" mini iconScale="120%" background="#F2Cd00" icon={blogIcon} />
             </div>
             <div>
                 <Button href="https://codepen.io/portiesp" color="black" mini iconScale="130%" background="#eee" icon={codePenIcon} />
