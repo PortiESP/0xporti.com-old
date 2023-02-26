@@ -12,13 +12,13 @@ const skillsData = [
     },
     {   
         id: 2,
-        icon: IconServer,
+        icon: IconShield,
         title: "Security",
         description: "Prevent attacks, audit systems, find vulnerabilities.",
     },
     {   
         id: 3,
-        icon: IconShield,
+        icon: IconServer,
         title: "OS Management",
         description: "Managing operative systems for servers, setup, error handling…",
     },

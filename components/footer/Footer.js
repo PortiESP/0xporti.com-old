@@ -17,9 +17,9 @@ export default function Footer(props){
                 <span className={sass.msg1}>This is a personal project so if there is any issues, misspelled words, inconsistent information or if you want to collaborate with the site please contact me.</span>
             </div>
             <div className={sass.div__social_icons}>
-                <div className={sass.div__social_icon}><Link href="https://www.instagram.com/portii.rm/" rel="noreferrer" target={"_blank"}><Image src={igIcon} alt="Instagram icon"></Image></Link></div>
-                <div className={sass.div__social_icon}><Link href="https://codepen.io/portiesp" rel="noreferrer" target={"_blank"}><Image src={cpIcon} alt="Github icon"></Image></Link></div>
-                <div className={sass.div__social_icon}><Link href="https://github.com/PortiESP" rel="noreferrer" target={"_blank"}><Image src={ghIcon} alt="Code-pen icon"></Image></Link></div>
+                <div className={sass.div__social_icon}><Link href="https://www.instagram.com/portii.rm/" rel="noreferrer" target={"_blank"}><Image src={igIcon} fill alt="Instagram icon"></Image></Link></div>
+                <div className={sass.div__social_icon}><Link href="https://codepen.io/portiesp" rel="noreferrer" target={"_blank"}><Image src={cpIcon} fill alt="Github icon"></Image></Link></div>
+                <div className={sass.div__social_icon}><Link href="https://github.com/PortiESP" rel="noreferrer" target={"_blank"}><Image src={ghIcon} fill alt="Code-pen icon"></Image></Link></div>
             </div>
         </div>
 )
