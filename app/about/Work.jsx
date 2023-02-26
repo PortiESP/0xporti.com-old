@@ -53,8 +53,8 @@ function WorkCard(props){
                     <Link href={props.clickUrl}>
                         
                         <div className={sass.div__image}>
-                            <Image src={props.thumbnail} alt="" placeholder="blur" layout="fill" objectFit="cover" style={{filter: "blur(4px)"}}/>
-                            <Image src={props.thumbnail} alt="" placeholder="blur" layout="fill" objectFit="contain"/>
+                            <Image src={props.thumbnail} alt="" placeholder="blur" fill/>
+                            <Image src={props.thumbnail} alt="" placeholder="blur" fill/>
                         </div>
                         <div className={sass.div__data}>
                             <h4>{props.title}</h4>

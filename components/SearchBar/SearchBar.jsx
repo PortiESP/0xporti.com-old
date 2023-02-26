@@ -27,7 +27,7 @@ export default function SearchBar(props){
         <>
         <div className={sass.div__search_wrap} >
             <div className={sass.div__image} onClick={ ()=> setShowResults(true)}>
-                <Image src="/assets/icons/browse.png" alt="" layout="fill" objectFit="contain"/>
+                <Image src="/assets/icons/browse.png" alt="Search icon" fill />
             </div>
         </div>
         
@@ -42,7 +42,7 @@ export default function SearchBar(props){
                                 value={searchValue}
                                 />
                     
-                        { searchValue && <button className={[sass.button_clear, searchValue ? "": sass.hidden].join(" ")} onClick={ () => setSearchValue("") }>x</button> }
+                        { searchValue && <button className={[sass.button__clear, searchValue ? "": sass.hidden].join(" ")} onClick={ () => setSearchValue("") }>x</button> }
                     </div>
 
 

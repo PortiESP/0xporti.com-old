@@ -64,6 +64,10 @@
                 color: #eee;
                 font-size: 6vw;
                 border: none;
+
+                &:focus{
+                    outline: none;
+                }
             }
         }
         

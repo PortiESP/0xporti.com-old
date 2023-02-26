@@ -23,7 +23,7 @@ export default function JumpUpButton(){
     return (
         <div className={[sass.div__button, showBtn && sass.show].join(" ")} onClick={()=>window.scrollTo(0,0)}>
             <div className={sass.div__image}>
-                <Image src={Icon} layout="fill" objectFit="cover" alt="Up arrow icon" />
+                <Image src={Icon} fill alt="Up arrow icon" />
             </div>
         </div>
     )

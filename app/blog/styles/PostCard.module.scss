@@ -57,6 +57,13 @@
     border-radius: var(--borderRadius) var(--borderRadius) 0 0;
 
     transition: all .2s ease;
+
+    & img:nth-child(1){
+        object-fit: cover;
+    }
+    & img:nth-child(2){
+        object-fit: contain;
+    }
     
 }
 

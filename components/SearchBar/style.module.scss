@@ -90,7 +90,7 @@
             }
         }
 
-        & .button_clear{
+        & .button__clear{
             --size: 40px;
 
             position: absolute;
@@ -108,6 +108,9 @@
 
             &:hover{
                 filter: brightness(120%);
+            }
+            &:focus{
+                outline: none;
             }
             
         }

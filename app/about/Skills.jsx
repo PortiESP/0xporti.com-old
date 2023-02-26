@@ -22,7 +22,7 @@ function SkillIcon(props){
 
     return (
         <div className={[sass.div__icon, props.invert && sass.invert].join(" ")} style={{...props.style, "--bright": props.bright, "--scale": props.scale}}>
-            <Image src={props.src} layout="fill" objectFit="cover" alt="icon"/>
+            <Image src={props.src} fill alt="icon"/>
         </div>
     )
 }

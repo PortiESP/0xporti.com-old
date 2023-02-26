@@ -16,7 +16,7 @@ export default function Header(props){
 
             <div className={sass.div__brand}>
                 <div className={sass.div__brand_img}>
-                    <Image src={logo} alt="Logo" layout="fill" objectFit="contain" priority/>
+                    <Image src={logo} alt="Logo" fill priority/>
                 </div>
                 <h2>{props.title}</h2>
             </div>

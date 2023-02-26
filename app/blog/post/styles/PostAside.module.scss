@@ -48,6 +48,7 @@
         
         & > *:nth-child(1){
             filter: blur(10px);
+            object-fit: cover;
         }
 
         & img{

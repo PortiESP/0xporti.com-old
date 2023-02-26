@@ -18,8 +18,8 @@ export default function PostAside(){
                 <div className={sass.div__aside_featured}>
                         <div className={sass.div__featured}>
                             <div className={sass.div__featured_image}>
-                                <Image src={featuredPostData.image} alt="Featured img" layout="fill" objectFit="cover"/>
-                                <Image src={featuredPostData.image} alt="Featured img" layout="fill" objectFit="contain"/>
+                                <Image src={featuredPostData.image} alt="Featured img" fill />
+                                <Image src={featuredPostData.image} alt="Featured img" fill />
                             </div>
                             <div className={sass.div__featured_data}>
                                 <h2>{featuredPostData.title}</h2>
