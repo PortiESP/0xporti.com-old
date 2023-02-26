@@ -1,0 +1,9 @@
+[submodule "components/MarkupWidgets"]
+	path = components/MarkupWidgets
+	url = https://github.com/PortiESP/MarkupWidgets.git
+[submodule "components/BubbleScrollBar"]
+	path = components/BubbleScrollBar
+	url = https://github.com/PortiESP/BubbleScrollBar.git
+[submodule "components/GithubButton"]
+	path = components/GithubButton
+	url = https://github.com/PortiESP/GithubButton.git
