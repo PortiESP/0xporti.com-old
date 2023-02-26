@@ -15,7 +15,7 @@ export default function PostCard(props){
             <a href={`/blog/post/${props.id}`} onClick={()=> console.log("click")}>
                 
                 <div className={sass.div__card_image} onClick={setLoadingPointer}>
-                    <Image src={imageData} alt="Post thumnail" fill style={{filter: "blur(4px)"}}/>
+                    <Image src={imageData} alt="Post thumnail" fill />
                     <Image src={imageData} alt="Post thumnail blur" fill/>
                 </div>
                 <div className={sass.div__card_data} onClick={setLoadingPointer}>
