@@ -5,12 +5,12 @@ import PostCard from "./PostCard" // Component
 import React, {useState, useEffect} from "react"
 // API Data
 import { categoriesStyle } from "@/api/blog/categoriesStyle"
-import {postsData} from "@/api/blog/posts"
+import {postsData} from "@/api/blog/postData"
 
 export default function Body(){
 
     const [searchValue, setSearchValue] = useState("")
-    const [searchResults, setSearchResults] = useState(postsData)
+    const [searchResults, setSearchResults] = useState(postsData.reverse())
     const [searchFilters, setSearchFilters] = useState([]) // [ ["category", "info"], ["category", "docs"], ["id", 1] ]
     const [showAddFilters, setShowAddFilters] = useState(false)
 
