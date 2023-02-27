@@ -14,7 +14,7 @@ export default function PostAside(){
                 <SocialButtons/>
             </div>
 
-            <Link href={"/blog/post/" + featuredPostData.id}>
+            <Link href={"/blog/post/" + featuredPostData.id} className={sass.a__aside_featured}>
                 <div className={sass.div__aside_featured}>
                         <div className={sass.div__featured}>
                             <div className={sass.div__featured_image}>
@@ -25,7 +25,7 @@ export default function PostAside(){
                                 <h2>{featuredPostData.title}</h2>
                                 <p>{featuredPostData.description}</p>
                             </div>
-                            <span className={sass.span__featured}><i>Featured post:</i></span>
+                            <span className={sass.span__featured}>Featured post</span>
                         </div>
                 </div>
             </Link>

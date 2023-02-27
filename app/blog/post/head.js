@@ -1,9 +1,9 @@
-import GetHeader from "./PostHeadMetadata"
+import PostHead from "./PostHeadMetadata"
 
 
 export default async function Head(){
 
     return (<>
-        <GetHeader />
+        <PostHead />
     </>)
 }

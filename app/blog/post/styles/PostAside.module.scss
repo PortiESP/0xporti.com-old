@@ -11,8 +11,8 @@
     justify-content: flex-start;
     align-items: flex-end;
     height: 100vh;
- 
-    & > a{
+    
+    &  .a__aside_featured{
         width: 100%;
         margin-top: 50px;
     }
@@ -20,7 +20,6 @@
 
 .div__aside_featured{
     width: 100%;
-    margin-top: 50px;
 }
 
 .div__featured{
@@ -29,19 +28,21 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
     width: 100%;
-    
+    border: 2px solid #333;
+    box-shadow: 0 0 20px 1px black;
+
+    transition: all .1s ease-in;
+
     
     & .div__featured_image{
         position: relative;
         width: 100%;
         height: 300px;
+        background: #000;
         overflow: hidden;
-        border-radius: 10px;
-        border: 1.8px solid $lightGray;
-        box-shadow: 0 0 10px 0 black;
-        overflow: hidden;
-
+        
         
         filter: brightness(80%);
         
@@ -50,20 +51,22 @@
             filter: blur(10px);
             object-fit: cover;
         }
-
+        
         & img{
             transition: all .3s ease;
         }
         
     }
     
-    & .div__featured_data{        
-        
-        --diagonalOffset: 30px;
-        
+    & .div__featured_data{       
+        $dataBackground: #000c; 
+        box-shadow: 0 -20px 20px $dataBackground;
+        background: $dataBackground;
         position: absolute;
+        bottom: 0;
+        right: 0;
         width: 100%;
-        height: 100%;
+        height: 50%;
         
         display: flex;
         flex-direction: column;
@@ -73,7 +76,6 @@
         padding: 30px;
         
         color: $white;
-        text-shadow: 0px 0px 4px black;
         text-align: end;
         
         
@@ -83,23 +85,22 @@
             
         }
         & p{
-            filter: brightness(70%);
+            color: #aaa;
             transition: all .3s ease;
         }
     }
 
     & .span__featured{
         position: absolute;
-        top:-20px;
-        left: 40px;
-        padding: 4px 30px;
+        top:10px;
+        right: 10px;
+        padding: 4px 20px;
 
-        box-shadow: 0 0 10px 0 black;
-        border: 1px solid red;
-        background-color: $gray;
-        color: $white;
-        font-weight: 500;
-        font-size: 1.2rem;
+        // border: 1px solid black;
+        background-color: #8884;
+        color: #aaa;
+        font-weight: 400;
+        font-size: 1rem;
         border-radius: 10px;
         
         
@@ -107,11 +108,7 @@
     
     &:hover{
         
-        & .div__featured_image img{
-            filter: brightness(20%);
-        }
-        
-        
+        transform: scale(102%);
 
     }
 }
