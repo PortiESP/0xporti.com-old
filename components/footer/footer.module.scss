@@ -68,15 +68,17 @@
 
     & .div__social_icon{
         position: relative;
-        --size: 28px;
-        width: var(--size);
-        height: var(--size);
+        $iconSize: 28px;
+        width: $iconSize;
+        height: $iconSize;
 
         object-fit: contain;
 
-        & a{
-            width: var(--size);
-            height: var(--size);
+        & a, & img{
+            display: inline-block;
+            position: relative;
+            width: $iconSize;
+            height: $iconSize;
         }
 
         
