@@ -13,6 +13,11 @@ const nextConfig = {
         destination: 'https://github.com/PortiESP/porti.dev/blob/main/public/api.md',
         permanent: true,
       },
+      {
+        source: '/',
+        destination: '/blog',
+        permanent: true,
+      },
     ]
   },
 }
