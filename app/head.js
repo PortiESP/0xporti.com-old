@@ -3,13 +3,13 @@ export default function Head(){
         <title>0xPorti</title>
 
         {/* <!-- Google tag (gtag.js) --> */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-242066778-1"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5E41NS5YEB"></script>
         <script>{`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-            gtag('config', 'UA-242066778-1');
+        gtag('config', 'G-5E41NS5YEB');
         `}</script>
 
     </>)
