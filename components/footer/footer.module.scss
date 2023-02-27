@@ -67,33 +67,39 @@
     gap: 20px;
 
     & .div__social_icon{
+        position: relative;
         --size: 28px;
         width: var(--size);
         height: var(--size);
 
         object-fit: contain;
 
+        & a{
+            width: var(--size);
+            height: var(--size);
+        }
+
         
         transition: all .3s ease;
         
-        &:nth-child(1){
+        &:nth-child(1) img{
             filter: invert(.7) ;
         }
-        &:nth-child(2){
+        &:nth-child(2) img{
             filter: invert(.7);
         }
-        &:nth-child(3){
+        &:nth-child(3) img{
             filter: brightness(70%);
         }
         
         &:hover{
-            &:nth-child(1){
+            &:nth-child(1) img{
                 filter: invert(100) drop-shadow( 0 5px 4px black);
             }
-            &:nth-child(2){
+            &:nth-child(2) img{
                 filter: invert(100) drop-shadow( 0 5px 4px black);
             }
-            &:nth-child(3){
+            &:nth-child(3) img{
                 filter: brightness(100%) drop-shadow( 0 5px 2px black);
             }
             
