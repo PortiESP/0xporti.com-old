@@ -3,7 +3,7 @@
 
 import Image from "next/image"
 import { useEffect, useState } from "react"
-import sass from "./loading.module.scss"
+import sass from "./styles/loading.module.scss"
 
 
 export default function Loading(){
