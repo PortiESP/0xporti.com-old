@@ -6,8 +6,6 @@ import {usePathname} from "next/navigation"
 import metadataList from "@/api/blog/postData"
 
 
-
-
 // The code that will be nested into the MainContent
 export default function PostPage(props){
     

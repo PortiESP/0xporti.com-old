@@ -1,6 +1,8 @@
 import BubbleScrollBar from "@/components/BubbleScrollBar/BubbleScrollBar";
 import { Callout, Code, Img, Paragraph, Quote, Section, Title, Title2, Title3, UList, Url } from "@/components/MarkupWidgets/Tags";
 import { Gray } from "@/components/MarkupWidgets/tags/Colors";
+import metadataList from "@/api/blog/postData"
+
 
 const sections = [
     {
@@ -20,6 +22,10 @@ const sections = [
         label:"Decrypt&mount on boot"
     }
 ]
+
+
+// <Head />
+export const metadata = metadataList.encrypt_disk
 
 
 export default function Page() { return (<>
