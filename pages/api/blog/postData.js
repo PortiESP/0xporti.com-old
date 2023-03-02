@@ -1,5 +1,5 @@
 /* =======[ Post object structure ]======
-{
+id:{
     id: 1,
     category: [],
     title: "",
@@ -40,9 +40,9 @@
 */
 
 
-const postData = 
-[
-    {
+const postData = {
+
+    website_steps:{
         id: "website-steps",
         title: "How I have created my website",
         category: ["Docs", "Projects"],
@@ -52,7 +52,8 @@ const postData =
         hidden: "true",
         lastUpdate: "15/08/2022"
     },
-    {
+
+    external_repos_github_bug:{
         id: "external-repos-github-bug",
         title: "Empty external repos in github",
         category: ["Troubleshoot", "Good practices", "Web development"],
@@ -62,7 +63,8 @@ const postData =
         hidden: "false",
         lastUpdate: "16/08/2022"
     },
-    {
+
+    instagram_unfollowers:{
         id: "instagram-unfollowers",
         title: "Get Instagram unfollowers",
         category: ["Tips", "Info", "OSINT"],
@@ -72,7 +74,8 @@ const postData =
         hidden: "false",
         lastUpdate: "17/08/2022"
     },
-    {
+
+    jq_command:{
         id: "jq-command",
         title: "Query JSON files from the terminal CLI",
         category: ["Linux", "Docs", "Command"],
@@ -82,7 +85,8 @@ const postData =
         hidden: "false",
         lastUpdate: "18/08/2022"
     },
-    {
+
+    socket_statistics_command:{
         id: "socket-statistics-command",
         title: "Scan local open ports",
         category: ["Linux", "Docs", "Networking", "Cibersecurity", "Command"],
@@ -92,7 +96,8 @@ const postData =
         hidden: "false",
         lastUpdate: "19/08/2022"
     },
-    {
+
+    shell_string_manipulation:{
         id: "shell-string-manipulation",
         title: "String manipulation with terminal commands",
         category: ["Linux", "Command", "Dev. Tools"],
@@ -102,7 +107,8 @@ const postData =
         hidden: "false",
         lastUpdate: "20/08/2022"
     },
-    {
+
+    arch_install:{
         id: "arch-install",
         title: "Download, install and setup of Arch Linux",
         category: ["Linux", "Docs", "Cibersecurity", "Tips", "Troubleshoot"],
@@ -112,7 +118,8 @@ const postData =
         hidden: "false",
         lastUpdate: "26/08/2022"
     },
-    {
+
+    linux_desktop:{
         id: "linux-desktop",
         title: "Install a desktop GUI on linuz",
         category: ["Linux", "Docs", "Tips"],
@@ -122,7 +129,7 @@ const postData =
         hidden: "false",
         lastUpdate: "28/08/2022"
     },
-    {
+    encrypt_disk:{
         id: "encrypt-disk",
         title: "Encrypt a partition in linux",
         category: ["Linux", "Docs", "Cibersecurity"],
@@ -132,7 +139,7 @@ const postData =
         hidden: "false",
         lastUpdate: "08/09/2022"
     },
-    
-]
+   
+}
 
 export default postData;

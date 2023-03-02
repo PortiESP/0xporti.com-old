@@ -22,7 +22,11 @@ export default function PostCard(props){
                     </div>
                     <div className={sass.div__card_category}>
                         {props.category.map( (cat, i) => <div key={i} className={sass.div__category} style={categoriesStyle[cat]} 
-                                                            onClick={ e => {e.preventDefault();props.setFilter( old =>  [...old, ["category", e.target.innerText]] )}}>#{cat}
+                                                                onClick={ e => {
+                                                                    e.preventDefault();
+                                                                    props.setFilter( old =>  [...old, ["category", e.target.innerText]] )}
+                                                                }
+                                                            >#{cat}
                                                         </div>)}
                     </div>
                     { props.label && <span className={sass.span__label} style={props.label.style}>{props.label.text}</span> }

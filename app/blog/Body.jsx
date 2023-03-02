@@ -7,7 +7,8 @@ import React, {useState, useEffect} from "react"
 import { categoriesStyle } from "@/api/blog/categoriesStyle"
 import postData from "@/api/blog/postData"
 
-export default function Body(){
+
+export default async function Body(){
 
     const [searchValue, setSearchValue] = useState("")
     const [searchResults, setSearchResults] = useState(postData.reverse())
@@ -15,11 +16,9 @@ export default function Body(){
     const [showAddFilters, setShowAddFilters] = useState(false)
 
     useEffect(()=>{
-
         fetch(`/api/blog/posts?order=recent&any=${searchValue}&${searchFilters.map( pair => `${pair[0].toLowerCase()}=${pair[1]}`).join("&")}`)
         .then( res => res.json())
         .then( res => setSearchResults(res))
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchValue, searchFilters])
 
 
@@ -65,7 +64,11 @@ export default function Body(){
             
 
             <div className={sass.div__posts_wrap}>
-                {searchResults.map( post => post.hidden === "false" && <PostCard key={post.id} {...post} setFilter={setSearchFilters}/> )}
+                {Object.entries(searchResults).map( post => {
+                        console.log(post)
+                        post[1].hidden === "false" && <PostCard key={post[0]} {...post[1]} setFilter={setSearchFilters}/>
+                    })
+                }
             </div>
         </div>
     )
