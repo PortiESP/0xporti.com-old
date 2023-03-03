@@ -80,6 +80,7 @@
 .div__resource_wrap{
     position: relative;
     display: flex;
+    justify-content: stretch;
 
     width: 100%;
     min-height:120px;
@@ -123,10 +124,12 @@
 .div__resource_data{
     position: relative;
     width: 100%;
+    &.hasImage{width: 80%;}
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    word-wrap: break-word;
     
     & div{
         height: 100%;
@@ -191,6 +194,9 @@
             width: 90vw;
             & h2{
                 font-size: 2em;
+            }
+            & p{
+                font-size: .9em;
             }
         }
     }

@@ -1,3 +1,4 @@
+
 import sass from "./styles/resources.module.scss"
 import sectionsList from "@/api/resources/sections"
 import Header from "@/components/header/Header"
@@ -19,7 +20,7 @@ function ResourceComp(props){
                     <Image alt="Resource image thumbnail" src={props.image} fill/>
                 </div>
             }
-            <div className={sass.div__resource_data}>
+            <div className={[sass.div__resource_data, props.image && sass.hasImage].join(" ")}>
                 <div>
                     <h3>
                         {props.title}
