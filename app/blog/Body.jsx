@@ -29,8 +29,6 @@ function filterPosts(filterList, searchQuery){
 
         const query = {...filterList, any:searchQuery}
 
-        console.log(query)
-
         const evaluation = [
             // Check if property exists ? Evaluate condition : return true if property filter is not selected
             query.id ? query.id === metadata.id : true,
@@ -47,7 +45,6 @@ function filterPosts(filterList, searchQuery){
         ].every(e=>e)
 
         return evaluation
-        // console.log(metadata.id, res, query, metadata)
 
     })
 
@@ -69,7 +66,6 @@ export default function Body(){
     useEffect(()=>{
         // Post cards components array
         setSearchResults( filterPosts({tags:filterTags,}, searchValue) )
-        // console.log(searchResults)
     }, [filterTags, searchValue])
 
 
