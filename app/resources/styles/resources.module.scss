@@ -108,7 +108,7 @@
 
 .div__resource_image{
     position: relative;
-    width: 20%;
+    min-width: 20%;
     overflow: hidden;
 
     & img:nth-child(1){
