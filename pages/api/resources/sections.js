@@ -86,10 +86,16 @@ const sectionsList = [
         title: "📖 Documentation",
         items: [
             {
+                title: "Linux documention",
+                description: "The linux MAN pages for OS features, commands, software concepts, etc...",
+                url: "https://linux.die.net/man/",
+                featured: false
+            },
+            {
                 title: "Tutorials point",
                 description: "This is a very good site for programming to check for explained documentation with examples of lots of programming languages",
                 url: "https://www.tutorialspoint.com/",
-                featured: true
+                featured: false
             },
             {
                 title: "Developer mozilla",
