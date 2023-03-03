@@ -8,11 +8,8 @@ import postData from "@/api/blog/postData"
 export default function PostMainContent(props){
 
     const postId = usePathname().split("/").slice(-1)[0].replaceAll("-", "_") || undefined
-    console.log(postId)
     const metadata = postId ? postData[postId] : undefined
-    console.log(metadata)
     const imageData = metadata && require(`@/blogImages/thumbnails/${metadata.thumbnail}`)
-    console.log(imageData)
 
     return (
         <div className={sass.div__mainContent_wrap}>
