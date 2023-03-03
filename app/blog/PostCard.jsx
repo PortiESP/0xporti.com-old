@@ -26,10 +26,10 @@ export default function PostCard(props){
 
                     {/* Category */}
                     <div className={sass.div__card_category}>
-                        {props.category.map( (cat, i) => <div key={i} className={sass.div__category} style={categoriesStyle[cat]} 
+                        {props.tags.map( (cat, i) => <div key={i} className={sass.div__category} style={categoriesStyle[cat]} 
                                                                 onClick={ e => {
                                                                     e.preventDefault();
-                                                                    props.setFilter( old =>  [...old, ["category", cat]] )}
+                                                                    props.setFilter( old =>  [...old, cat] )}
                                                                 }
                                                             >#{cat}
                                                         </div>)}

@@ -11,12 +11,12 @@ import postData from "@/api/blog/postData"
 
 function filterPosts(filterList, searchQuery){
 
-    function filterCat(post, categories){
-        return typeof categories === "string" 
+    function filterTag(post, tags){
+        return typeof tags === "string" 
         ?
-        post.category.find( kw => kw.match(RegExp("^" + categories, "i")))
+        post.tags.find( kw => kw.match(RegExp("^" + categories, "i")))
         :
-        categories.map( cat => post.category.find(kw => kw.match(RegExp("^" + cat, "i"))) ).every(e=>e)
+        tags.map( cat => post.tags.find(kw => kw.match(RegExp("^" + cat, "i"))) ).every(e=>e)
     
     }
     
@@ -27,14 +27,16 @@ function filterPosts(filterList, searchQuery){
 
     let filteredList = Object.values(postData).filter( metadata => {
 
-        const query = {...Object.fromEntries(filterList), any:searchQuery}
+        const query = {...filterList, any:searchQuery}
+
+        console.log(query)
 
         const evaluation = [
             // Check if property exists ? Evaluate condition : return true if property filter is not selected
             query.id ? query.id === metadata.id : true,
             query.title ? metadata.title.match(RegExp( query.title, "i")) : true,
             query.description ? metadata.description.match(RegExp( query.description, "i")) : true,
-            query.category ?  filterCat(metadata, query.category): true,
+            query.tags ?  filterTag(metadata, query.tags): true,
             query.keywords ? metadata.keywords ? metadata.keywords.find( kw => kw.match(RegExp("^" + (query.keywords.split && query.keywords || query.keywords.join("|")), "i"))  ) : false : true,
             query.author ? metadata.author.match(RegExp( query.author, "i")) : true,
             query.hidden ? metadata.hidden === query.hidden : true,
@@ -60,17 +62,15 @@ export default function Body(){
 
     const [searchValue, setSearchValue] = useState("")
     const [searchResults, setSearchResults] = useState(Object.values(postData).reverse())
-    const [searchFilters, setSearchFilters] = useState([]) // [ ["category", "info"], ["category", "docs"], ["id", 1] ]
+    const [filterTags, setFilterTags] = useState([]) // ["tag1", "tag2", ...]
     const [showAddFilters, setShowAddFilters] = useState(false)
 
 
     useEffect(()=>{
-        // postFilteredList = searchFilters.length ? Object.entries(searchResults).reverse() : filterPosts()
-
         // Post cards components array
-        setSearchResults( filterPosts(searchFilters, searchValue) )
+        setSearchResults( filterPosts({tags:filterTags,}, searchValue) )
         // console.log(searchResults)
-    }, [searchFilters, searchValue])
+    }, [filterTags, searchValue])
 
 
     return (
@@ -96,7 +96,7 @@ export default function Body(){
                                 {
                                     Object.entries(categoriesStyle).map( (pair, i) => <span key={i} className={sass.span__filter} 
                                         style={pair[1]}
-                                        onClick={ () => setSearchFilters( old =>  [ ...old, ["category", pair[0]] ]) }
+                                        onClick={ () => setFilterTags( old => [...old, pair[0]]) }
                                         >#{pair[0]}</span>
                                     )
                                 }
@@ -104,10 +104,10 @@ export default function Body(){
                         }
                     </div>
                     {
-                        searchFilters.map( (pair,i) => <span key={i} className={sass.span__filter} 
-                                                    style={categoriesStyle[pair[1]]}
-                                                    onClick={ ()=> setSearchFilters( old =>  [...old].filter( data => data[1] !== pair[1]) ) }
-                                                    >#{pair[1]}</span>
+                        filterTags.map( (tag,i) => tag && <span key={i} className={sass.span__filter} 
+                                                    style={categoriesStyle[tag]}
+                                                    onClick={ ()=> setFilterTags( old => old.filter( old_t => tag != old_t) ) }
+                                                    >#{tag}</span>
                                         )
                     }
                 </div>
@@ -115,7 +115,7 @@ export default function Body(){
                 
             
             {/* Post card */}
-            <div className={sass.div__posts_wrap}>{searchResults.map( post => <PostCard key={post.id} {...post} setFilter={setSearchFilters}/>)}</div>
+            <div className={sass.div__posts_wrap}>{searchResults.map( post => <PostCard key={post.id} {...post} setFilter={setFilterTags}/>)}</div>
         </div>
     )
 }
