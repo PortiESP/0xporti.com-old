@@ -5,11 +5,81 @@ const sectionsList = [
         items: [
             {
                 title: "Live Overflow",
-                description: "Live Overflow makes excellent videos about Binary Exploitation and reversing binaries with nice videos and explanations",
+                description: "Live Overflow makes excellent videos about Binary Exploitation and Reversing Binaries with nice videos and explanations",
                 url: "https://www.youtube.com/@LiveOverflow",
                 image: "https://yt3.googleusercontent.com/ytc/AL5GRJW4DDi78xlY1NrlPt-XPNsitNIceSM8Y6QpmW7LxQ=s176-c-k-c0x00ffffff-no-rj",
                 featured: true
-            }
+            },
+            {
+                title: "Pwn Function",
+                description: "Pwn Function is also a nice creator with amazing videos explaining security vulnerabilities",
+                url: "https://www.youtube.com/@PwnFunction",
+                image: "https://yt3.googleusercontent.com/ytc/AL5GRJXBLxheF5rieTRY-hM8xqDxty6LeNkHrnlG_eCAIg=s88-c-k-c0x00ffffff-no-rj",
+                featured: true
+            },
+            {
+                title: "Neso Academy",
+                description: "This channel makes videos about software and programming",
+                url: "https://www.youtube.com/@nesoacademy",
+                image: "https://yt3.googleusercontent.com/ytc/AL5GRJW3as4kl5hkBMWZrMA0EPbXqb86Hj_HLEmrQhr-=s88-c-k-c0x00ffffff-no-rj",
+                featured: false
+            },
+            {
+                title: "The PC Security Channel",
+                description: "Content creator that analyzes malware and test software security features",
+                url: "https://www.youtube.com/@pcsecuritychannel",
+                image: "https://yt3.googleusercontent.com/ytc/AL5GRJUlVmiywy0TKeeS681C6BTkSrsWCzzJ7b-RNoyHDA=s88-c-k-c0x00ffffff-no-rj",
+                featured: false
+            },
+            {
+                title: "Guided hacking",
+                description: "This channel makes videos about security and expoiting software",
+                url: "https://www.youtube.com/@GuidedHacking",
+                image: "https://yt3.googleusercontent.com/ytc/AL5GRJWsizkwUdPDJ7Jrv-1s8VvCFq4sTie89ELE1Cv8gw=s88-c-k-c0x00ffffff-no-rj",
+                featured: false
+            },
+            {
+                title: "DFIR Science",
+                description: "Digital Forensics videos",
+                url: "https://www.youtube.com/@DFIRScience",
+                image: "https://yt3.googleusercontent.com/Pgdj0hbRJuiR6VIQXlFmZpziHs-bV4jl61jxzfn2O-E7cw3O4XpVjAI8G7WJn8HsNlQKuJEx8g=s88-c-k-c0x00ffffff-no-rj",
+                featured: false
+            },
+            {
+                title: "Crypto Cat",
+                description: "Binary Exploitation videos and walkthroughs",
+                url: "https://www.youtube.com/@_CryptoCat",
+                image: "https://yt3.googleusercontent.com/WnJBZgcKCChZRSgoRKgeZOEqnD6ypDxn29caz09Bhr8EcgM5XlqGWMDBmvBUcahUlUCCOGBBG-k=s88-c-k-c0x00ffffff-no-rj",
+                featured: false
+            },
+            {
+                title: "CSE Praticals",
+                description: "Low level software videos",
+                url: "https://www.youtube.com/@CSEPracticals",
+                image: "https://yt3.googleusercontent.com/ytc/AL5GRJU7t1R7vKQlNN6o9tWeCgncG_jLfpojby3qLi6n=s88-c-k-c0x00ffffff-no-rj",
+                featured: false
+            },
+            {
+                title: "Malware Analysis For Hedgehogs",
+                description: "Malware analysis and binary exploitation",
+                url: "https://www.youtube.com/@MalwareAnalysisForHedgehogs",
+                image: "https://yt3.googleusercontent.com/ytc/AL5GRJVkCtH-MYLuB3HE930AxTyuzDynRs7ENCxgOLS2=s88-c-k-c0x00ffffff-no-rj",
+                featured: false
+            },
+            {
+                title: "Fireship",
+                description: "This creators makes Full-Stack vidos and divulgation",
+                url: "https://www.youtube.com/@Fireship",
+                image: "https://yt3.googleusercontent.com/ytc/AL5GRJUEZDXANi-9AD9yJzNTU1R0_cA1Brd6nLXLZaG31g=s88-c-k-c0x00ffffff-no-rj",
+                featured: false
+            },
+            {
+                title: "Dorian Designs",
+                description: "Front-end developer with nice videos about CSS and web styling",
+                url: "https://www.youtube.com/@DorianDesings",
+                image: "https://yt3.googleusercontent.com/KFTx2ATDyV-NEd7LSqENJ2XUMqFpDzpisWYhJAQmyRHL9TF6tZqNv1Jl2ON88c4cD1NTTAO_uRI=s88-c-k-c0x00ffffff-no-rj",
+                featured: false
+            },
         ]
     },
     {
@@ -37,15 +107,15 @@ const sectionsList = [
         title: "😀 Icons",
         items: [
             {
-                title: "Flaticons",
-                description: "This site have many icons of many diferent styles with high quality, attribution is required",
-                url: "https://www.flaticon.com/authors/flat_circular/flat/"
-            },
-            {
                 title: "Dev icons",
                 description: "This page has the logos of the programming laguages, IDEs, desing tools and basicaly almost every thing we use as developers daily, icons also have diferent versions available, no reference needed",
                 url: "https://devicon.dev/",
                 featured: true
+            },
+            {
+                title: "Flaticons",
+                description: "This site have many icons of many diferent styles with high quality, attribution is required",
+                url: "https://www.flaticon.com/authors/flat_circular/flat/"
             },
             {
                 title: "Icons8",

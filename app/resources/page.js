@@ -16,6 +16,7 @@ function ResourceComp(props){
                 props.image &&
                 <div className={sass.div__resource_image}>
                     <Image alt="Resource image thumbnail" src={props.image} fill/>
+                    <Image alt="Resource image thumbnail" src={props.image} fill/>
                 </div>
             }
             <div className={sass.div__resource_data}>
