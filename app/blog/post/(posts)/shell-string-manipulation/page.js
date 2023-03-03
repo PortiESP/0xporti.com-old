@@ -1,6 +1,11 @@
 import BubbleScrollBar from "@/components/BubbleScrollBar/BubbleScrollBar"
 import {Title, Title2, Title3, Title4, Paragraph, Callout, UList, Img, Code, Hr, Block, Quote, Link, Toggle, Section} from "@/components/MarkupWidgets/Tags.js"
 import { Gray } from "@/components/MarkupWidgets/tags/Colors"
+import metadataList from "@/api/blog/postData"
+
+
+export const metadata = metadataList.shell_string_manipulation
+
 
 
 const sections = [

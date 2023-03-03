@@ -1,6 +1,9 @@
 import { Callout, Code, Paragraph, Section, Title, Toggle, UList } from "@/components/MarkupWidgets/Tags";
 import { Gray } from "@/components/MarkupWidgets/tags/Colors";
+import metadataList from "@/api/blog/postData"
 
+
+export const metadata = metadataList.linux_desktop
 
 
 export default function Page(){ return (

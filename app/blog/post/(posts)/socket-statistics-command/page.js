@@ -1,4 +1,9 @@
 import {Title, Title2, Title3, Title4, Paragraph, Callout, UList, Img, Code, Block, Section} from "@/components/MarkupWidgets/Tags.js"
+import metadataList from "@/api/blog/postData"
+
+
+export const metadata = metadataList.socket_statistics_command
+
 
 
 export default function Page(){ return (<>

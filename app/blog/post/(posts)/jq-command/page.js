@@ -1,4 +1,9 @@
 import {Title, Title2, Title4, Paragraph, UList, Code, Section} from "@/components/MarkupWidgets/Tags.js"
+import metadataList from "@/api/blog/postData"
+
+
+export const metadata = metadataList.jq_command
+
 
 
 export default function Page(){ return (

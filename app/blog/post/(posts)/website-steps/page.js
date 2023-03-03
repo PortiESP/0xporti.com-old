@@ -5,6 +5,12 @@ import BubbleScrollBar from "@/components/BubbleScrollBar/BubbleScrollBar"
 import image1 from "@/postsImages/blogProject/0_screenshotPortfolio.png"
 import image2 from "@/postsImages/blogProject/0_screenshotBlog.png"
 import image3 from "@/postsImages/blogProject/0_apiScreenshoot.png"
+import metadataList from "@/api/blog/postData"
+
+
+export const metadata = metadataList.website_steps
+
+
 // Scrollbar sections
 const sections = [
     {
