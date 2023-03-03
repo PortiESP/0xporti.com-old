@@ -175,10 +175,10 @@ export default function Page() { return (<>
             This configuration file is divided in rows to setup diferent partitions, and columns for the partition parameters
         </Paragraph>
         <UList items={[
-            <><b>Logical device name</b> ~ This is the name we have used when decrypting a partition into a logical volume</>, 
-            <><b>UUID or device path</b> ~ This is the UUID of the device or the device path</>, 
-            <><b>Method of authentication</b> ~ Here we will type <i>none</i> if we want to use a passphrase as the authentication method, or the path of the key file (<i>method not recommended</i>)</>,
-            <><b>Options</b> ~ Here we want set additional options: <i>Max tries, encrypt method, etc... (see manual for more)</i></>
+            <><b>Logical device name</b> → This is the name we have used when decrypting a partition into a logical volume</>, 
+            <><b>UUID or device path</b> → This is the UUID of the device or the device path</>, 
+            <><b>Method of authentication</b> → Here we will type <i>none</i> if we want to use a passphrase as the authentication method, or the path of the key file (<i>method not recommended</i>)</>,
+            <><b>Options</b> → Here we want set additional options: <i>Max tries, encrypt method, etc... (see manual for more)</i></>
         ]} />
         <Url target="_blank" title={<><Code inline>/etc/cripttab</Code> file docs</>} src="https://man7.org/linux/man-pages/man5/crypttab.5.html"/> 
         <Code caption="/etc/crypttab">
