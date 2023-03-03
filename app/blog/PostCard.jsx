@@ -12,19 +12,24 @@ export default function PostCard(props){
             <div className={sass.div__postCard}>
                 <Link href={`/blog/post/${props.id}`}>
                     
+                    {/* Thumbnail */}
                     <div className={sass.div__card_image}>
                         <Image src={imageData} alt="Post thumnail" fill />
                         <Image src={imageData} alt="Post thumnail blur" fill/>
                     </div>
+
+                    {/* Data */}
                     <div className={sass.div__card_data}>
                         <h2>{props.title}</h2>
                         <p>{props.description}</p>
                     </div>
+
+                    {/* Category */}
                     <div className={sass.div__card_category}>
                         {props.category.map( (cat, i) => <div key={i} className={sass.div__category} style={categoriesStyle[cat]} 
                                                                 onClick={ e => {
                                                                     e.preventDefault();
-                                                                    props.setFilter( old =>  [...old, ["category", e.target.innerText]] )}
+                                                                    props.setFilter( old =>  [...old, ["category", cat]] )}
                                                                 }
                                                             >#{cat}
                                                         </div>)}
