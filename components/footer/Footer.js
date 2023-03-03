@@ -1,7 +1,7 @@
 import sass from "./footer.module.scss"
 import Image from "next/image"
 import igIcon from "@/assets/icons/instagram.png"
-import cpIcon from "@/assets/icons/codepen-plain.svg"
+import ytIcon from "@/assets/icons/youtube_B&N.svg"
 import ghIcon from "@/assets/icons/github_icon.png"
 import Link from "next/link"
 
@@ -19,7 +19,7 @@ export default function Footer(props){
             </div>
             <div className={sass.div__social_icons}>
                 <div className={sass.div__social_icon}><Link href="https://www.instagram.com/portii.rm/" rel="noreferrer" target={"_blank"}><Image src={igIcon} fill alt="Instagram icon"></Image></Link></div>
-                <div className={sass.div__social_icon}><Link href="https://codepen.io/portiesp" rel="noreferrer" target={"_blank"}><Image src={cpIcon} fill alt="Github icon"></Image></Link></div>
+                <div className={sass.div__social_icon}><Link href="https://www.youtube.com/@0xPorti" rel="noreferrer" target={"_blank"}><Image src={ytIcon} fill alt="Youtube icon"></Image></Link></div>
                 <div className={sass.div__social_icon}><Link href="https://github.com/PortiESP" rel="noreferrer" target={"_blank"}><Image src={ghIcon} fill alt="Code-pen icon"></Image></Link></div>
             </div>
         </div>

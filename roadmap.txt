@@ -1,4 +1,2 @@
 - Add social media meta tags
 - Publish more posts
-- Add metadata header to n2mw compiler
-- Creator score

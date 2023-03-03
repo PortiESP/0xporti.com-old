@@ -52,8 +52,6 @@ function ResourceComp(props){
 
 function ResourceSection(props){
 
-    console.log(props)
-
     return (
         <section className={sass.section} id={props.data.id}>
             <h2>{props.data.title}</h2>
