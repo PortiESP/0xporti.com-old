@@ -3,6 +3,8 @@
 import BubbleScrollBar from "@/components/BubbleScrollBar/BubbleScrollBar"
 import {Title, Title2, Title3, Title4, Link, Paragraph, UList, Img, Callout, Code, SubPage, Quote, Url, Toggle, Block, Hr, Section} from "@/components/MarkupWidgets/Tags.js"
 import { Gray, Color } from "@/components/MarkupWidgets/tags/Colors"
+import metadataList from "@/api/blog/postData"
+
 // Images
 import image1 from "@/postsImages/arch_install/imager.png"
 import relatedPostImg1 from "@/blogImages/thumbnails/linux_desktop.svg"
@@ -25,6 +27,9 @@ const sections = [
         label: "Setup"
     },
 ]
+
+
+export const metadata = metadataList.arch_install
 
 
 export default function Page(){

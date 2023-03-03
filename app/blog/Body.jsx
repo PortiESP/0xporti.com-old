@@ -51,6 +51,9 @@ function filterPosts(filterList, searchQuery){
     // Order posts from the most recent
     filteredList.sort((a,b) => parseDate(b.lastUpdate) - parseDate(a.lastUpdate))
 
+    // Hide posts with the hidden filed set to "true"
+    filteredList = filteredList.filter(item => item.hidden === "false")
+
     return filteredList
 }
 
@@ -58,8 +61,8 @@ function filterPosts(filterList, searchQuery){
 export default function Body(){
 
     const [searchValue, setSearchValue] = useState("")
-    const [searchResults, setSearchResults] = useState(Object.values(postData).reverse())
     const [filterTags, setFilterTags] = useState([]) // ["tag1", "tag2", ...]
+    const [searchResults, setSearchResults] = useState(filterPosts({tags:filterTags,}, searchValue))
     const [showAddFilters, setShowAddFilters] = useState(false)
 
 
