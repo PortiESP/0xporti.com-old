@@ -2,6 +2,7 @@
 const sectionsList = [
     {
         title: "📹 Creators",
+        id: "creators",
         items: [
             {
                 title: "Live Overflow",
@@ -84,6 +85,7 @@ const sectionsList = [
     },
     {
         title: "📖 Documentation",
+        id: "documentation",
         items: [
             {
                 title: "Linux documention",
@@ -111,6 +113,7 @@ const sectionsList = [
     },
     {
         title: "😀 Icons",
+        id: "icons",
         items: [
             {
                 title: "Dev icons",
@@ -152,6 +155,7 @@ const sectionsList = [
     },
     {
         title: "🎨 Color",
+        id: "color",
         items: [
             {
                 title: "Adove color",
@@ -172,6 +176,7 @@ const sectionsList = [
     },
     {
         title: "⛰️ Backgrounds",
+        id: "backgrounds",
         items: [
             {
                 title: "Transparent textures",
@@ -188,6 +193,7 @@ const sectionsList = [
     },
     {
         title: "🧩 Chrome extensions",
+        id: "chrome--extensions",
         items: [
             {
                 title: "CSS Peeper",
@@ -213,6 +219,7 @@ const sectionsList = [
     },
     {
         title: "🔠 Fonts",
+        id: "fonts",
         items: [
             {
                 title: "Google fonts",
@@ -224,6 +231,7 @@ const sectionsList = [
     },
     {
         title: "🖌️ Illustrations",
+        id: "illustrations",
         items: [
             {
                 title: "Undraw",
@@ -240,6 +248,7 @@ const sectionsList = [
     },
     {
         title: "🖼️ Images",
+        id: "images",
         items: [
             {
                 title: "Unsplash",
@@ -255,6 +264,7 @@ const sectionsList = [
     },
     {
         title: "🏗️ UI Components & design",
+        id: "components",
         items: [
             {
                 title: "UIverse",

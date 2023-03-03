@@ -6,9 +6,24 @@ import Footer from "@/components/footer/Footer"
 import Head from "next/head"
 import Link from "next/link"
 import Image from "next/image"
+import BubbleScrollBar from "@/components/BubbleScrollBar/BubbleScrollBar"
+
+
+const sections = [
+    {label: "Creators", id: "creators"},
+    {label: "Docs", id: "documentation"},
+    {label: "Icons", id: "icons"},
+    {label: "Color", id: "color"},
+    {label: "Backgrounds", id: "backgrounds"},
+    {label: "Chrome extensions", id: "chrome--extensions"},
+    {label: "Fonst", id: "fonts"},
+    {label: "Illustrations", id: "illustrations"},
+    {label: "Images", id: "images"},
+    {label: "UI Components", id: "components"},
+]
+
 
 function ResourceComp(props){
-
 
     return (
     <Link href={props.url} target="_blank" passHref>
@@ -23,7 +38,7 @@ function ResourceComp(props){
             <div className={[sass.div__resource_data, props.image && sass.hasImage].join(" ")}>
                 <div>
                     <h3>
-                        {props.title}
+                    🔗 {props.title}
                     </h3>
                     <p>{props.description}</p>
                 </div>
@@ -36,8 +51,11 @@ function ResourceComp(props){
 }
 
 function ResourceSection(props){
+
+    console.log(props)
+
     return (
-        <section className={sass.section}>
+        <section className={sass.section} id={props.data.id}>
             <h2>{props.data.title}</h2>
             <div className={sass.div__section_items}>
                 {
@@ -69,6 +87,8 @@ export default function Resources(){
                 </div>
             </div>
             <Footer bg="#151515dd"/>
+
+            <BubbleScrollBar sections={sections}/>
         </div>
         </>
     )
