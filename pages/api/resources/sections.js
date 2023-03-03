@@ -1,6 +1,18 @@
 
 const sectionsList = [
     {
+        title: "📹 Creators",
+        items: [
+            {
+                title: "Live Overflow",
+                description: "Live Overflow makes excellent videos about Binary Exploitation and reversing binaries with nice videos and explanations",
+                url: "https://www.youtube.com/@LiveOverflow",
+                image: "https://yt3.googleusercontent.com/ytc/AL5GRJW4DDi78xlY1NrlPt-XPNsitNIceSM8Y6QpmW7LxQ=s176-c-k-c0x00ffffff-no-rj",
+                featured: true
+            }
+        ]
+    },
+    {
         title: "📖 Documentation",
         items: [
             {

@@ -4,19 +4,30 @@ import Header from "@/components/header/Header"
 import Footer from "@/components/footer/Footer"
 import Head from "next/head"
 import Link from "next/link"
+import Image from "next/image"
 
 function ResourceComp(props){
 
 
     return (
-    <Link href={props.url} passHref>
+    <Link href={props.url} target="_blank" passHref>
         <div className={sass.div__resource_wrap}>
-            <h3>
-                {props.title}
-            </h3>
-            <p>{props.description}</p>
-            <span>{props.url}</span>
-            {props.featured && <span>⭐</span>}
+            {
+                props.image &&
+                <div className={sass.div__resource_image}>
+                    <Image alt="Resource image thumbnail" src={props.image} fill/>
+                </div>
+            }
+            <div className={sass.div__resource_data}>
+                <div>
+                    <h3>
+                        {props.title}
+                    </h3>
+                    <p>{props.description}</p>
+                </div>
+                <span>{props.url}</span>
+            </div>
+            {props.featured && <span className={sass.span__featured}>⭐</span>}
         </div>
     </Link>
     )
@@ -47,7 +58,7 @@ export default function Resources(){
             <Header title="RESOURCES"/>
             <div className={sass.div__resources_wrap}>
                 <div className={sass.div__title}>
-                    <h1><span className={sass.book1}>📚</span> My resources bibliography 📚</h1>
+                    <h1><span className={sass.book1}>🏷️</span> My resources bibliography 🏷️</h1>
                     <p>This the my personal bibliography with useful sites I have used, here we have sites for documentation, icons, images, etc...</p>
                 </div>
 

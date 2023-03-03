@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ["i.gyazo.com", "cdn.jsdelivr.net"]
+    domains: ["i.gyazo.com", "cdn.jsdelivr.net", "yt3.googleusercontent.com"]
   },
   async redirects() {
     return [

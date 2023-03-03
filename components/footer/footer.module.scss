@@ -46,13 +46,17 @@
         color: #888;
     }
 
-    & .msg1{
+    & .msg{
         padding: 10px 0;
         color: gray;
         font-style: italic;
         font-size: .7em;
         width: 80vw;
         max-width: 600px;
+
+        & a{
+            color: rgb(217, 0, 255);
+        }
     }
 }
 

@@ -65,12 +65,12 @@
     }
 
     .div__section_items{
+        position: relative;
+        height: 100%;
         display: flex;
         flex-direction: column;
         gap: 20px;
 
-        
-        
     }
 }
 
@@ -79,17 +79,61 @@
 // ------------- Resource component
 .div__resource_wrap{
     position: relative;
-    padding: 10px 20px;
-    padding-bottom: 40px;
+    display: flex;
+
+    width: 100%;
+    min-height:120px;
+
     background: #333;
     border-radius: 4px;
-    
 
+    overflow: hidden;
+    
     &:hover{
         background: #444;
     }
+    
+    & > .span__featured{
+        position: absolute;
+        top:10px;
+        right: 20px;
+        font-size: 1em;
+        padding: 4px 4px;
+        
+        border-radius:4px;
+        
+        & > span{font-style: normal;}
+    }
+}
 
-    & > h3{
+.div__resource_image{
+    position: relative;
+    width: 25%;
+    // height: 120px;
+    // margin-top: 20px;
+
+    & img{
+        // width: 100px;
+        // height: 100px;
+        object-fit: cover;
+    }
+}
+
+.div__resource_data{
+    position: relative;
+    width: 75%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    & div{
+        height: 100%;
+        position: relative;
+
+    }
+    
+    & h3{
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -101,33 +145,24 @@
 
         
     }
-    & > p{
+    & p{
         color: #bbb;
+        margin-bottom: 10px;
+        word-wrap: break-word;
     }
 
 
-    & > span:first-of-type{
-        position: absolute;
-        bottom: 10px;
-        right: 20px;
+    & span{
+        width: 100%;
+
 
         color: #888a;
+        text-align: end;
         font-weight: 300;
         font-size: .75em;
         font-style: italic;
     }
 
-    & > span:nth-child(4){
-        position: absolute;
-        top:10px;
-        right: 20px;
-        font-size: 1em;
-        padding: 4px 4px;
-
-        border-radius:4px;
-
-        & > span{font-style: normal;}
-    }
 }
 
 
