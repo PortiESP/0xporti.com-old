@@ -4,7 +4,7 @@ import sass from "./styles/Body.module.scss"
 import PostCard from "./PostCard" // Component
 import React, {useState, useEffect} from "react"
 // API Data
-import { categoriesStyle } from "@/api/blog/tagsStyles"
+import tagsStyles from "@/api/blog/tagsStyles"
 import postData from "@/api/blog/postsData"
 
 
@@ -93,7 +93,7 @@ export default function Body(){
                             showAddFilters &&
                             <div className={sass.div__filterSelect}>
                                 {
-                                    Object.entries(categoriesStyle).map( (pair, i) => <span key={i} className={sass.span__filter} 
+                                    Object.entries(tagsStyles).map( (pair, i) => <span key={i} className={sass.span__filter} 
                                         style={pair[1]}
                                         onClick={ () => setFilterTags( old => [...old, pair[0]]) }
                                         >#{pair[0]}</span>
@@ -104,7 +104,7 @@ export default function Body(){
                     </div>
                     {
                         filterTags.map( (tag,i) => tag && <span key={i} className={sass.span__filter} 
-                                                    style={categoriesStyle[tag]}
+                                                    style={tagsStyles[tag]}
                                                     onClick={ ()=> setFilterTags( old => old.filter( old_t => tag != old_t) ) }
                                                     >#{tag}</span>
                                         )
