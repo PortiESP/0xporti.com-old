@@ -9,7 +9,7 @@ export default function PostMainContent(props){
 
     const postId = usePathname().split("/").slice(-1)[0].replaceAll("-", "_") || undefined
     const metadata = postId ? postData[postId] : undefined
-    const imageData = metadata && require(`@/blogImages/thumbnails/${metadata.thumbnail}`)
+    const imageData = metadata && metadata.thumbnail ? require(`@/blogImages/thumbnails/${metadata.thumbnail}`) : require("@/blogImages/thumbnails/default_thumbnail.svg")
 
     return (
         <div className={sass.div__mainContent_wrap}>

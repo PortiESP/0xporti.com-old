@@ -1,3 +1,3 @@
-- Default thumnails
-- Docs
 - API social metadata
+- Posts inside serachbar
+- Work section (/about) update images

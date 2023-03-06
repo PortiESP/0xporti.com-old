@@ -5,7 +5,7 @@ import tagsStyles from "@/api/blog/tagsStyles"
 
 export default function PostCard(props){
 
-    const imageData = require(`@/blogImages/thumbnails/${props.thumbnail}`)
+    const imageData = props.thumbnail ? require(`@/blogImages/thumbnails/${props.thumbnail}`) : require("@/blogImages/thumbnails/default_thumbnail.svg")
 
     return (
         <div className={sass.div__postCard_wrap}>
