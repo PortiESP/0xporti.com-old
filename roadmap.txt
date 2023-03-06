@@ -1,2 +1,3 @@
-- Add social media meta tags
-- Publish more posts
+- Default thumnails
+- Docs
+- API social metadata
