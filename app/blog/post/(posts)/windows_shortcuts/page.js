@@ -76,20 +76,23 @@ export default function Page(){ return (<>
 
 	<Section title="Windows apps" id="apps" sticky>
 		<Callout label="info">We have shortcuts for some windows apps such as the file explorer, magnifier, task manager, …</Callout>
-		<Quote title="Shortcut: Open pinned app (Task Bar)" color={QUOTE_COLOR}>
+		<Quote title="Shortcut: Open pinned app (Task Bar) (N representes the index of the app in the task bar, the at the bottom of the screen)" color={QUOTE_COLOR}>
 			<Code inline color={KEY_COLOR}>WIN</Code> + <b>N</b>
 		</Quote>
 		<Quote title="Shortcut: Open File Explorer" color={QUOTE_COLOR}>
 			<Code inline color={KEY_COLOR}>WIN</Code> + <Code inline color={KEY_COLOR}>E</Code>
 		</Quote>
 		<Quote title="Shortcut: Task Manager" color={QUOTE_COLOR}>
-			<Code inline color={KEY_COLOR}>Ctrl</Code> + <Code inline color={KEY_COLOR}>WIN</Code> + <Code inline color={KEY_COLOR}>ESC</Code>
+			<Code inline color={KEY_COLOR}>Ctrl</Code> + <Code inline color={KEY_COLOR}>Shift</Code> + <Code inline color={KEY_COLOR}>ESC</Code>
 		</Quote>
 		<Quote title="Shortcut: Settings" color={QUOTE_COLOR}>
 			<Code inline color={KEY_COLOR}>WIN</Code> + <Code inline color={KEY_COLOR}>I</Code>
 		</Quote>
 		<Quote title="Shortcut: Magnifier" color={QUOTE_COLOR}>
 			<Code inline color={KEY_COLOR}>WIN</Code> + <Code inline color={KEY_COLOR}>+</Code>
+			<br/>
+			<br/>
+			<i>With the magnifier opened:</i>
 			<UList items={[
 			<><Code inline color={KEY_COLOR}>WIN</Code> + <Code inline color={KEY_COLOR}>+</Code> → Zoom In</>,
 			<><Code inline color={KEY_COLOR}>WIN</Code> + <Code inline color={KEY_COLOR}>-</Code> → Zoom Oun</>
