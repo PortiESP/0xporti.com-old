@@ -1,7 +1,7 @@
 import Image from "next/image"
 import sass from "./styles/Skills.module.scss"
 // API
-import {skillsData} from "@/api/landing/skills"
+import {skillsData} from "@/api/about/skills"
 
 
 

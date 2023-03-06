@@ -1,5 +1,5 @@
 
-const categoriesStyle = {
+const tagsStyles = {
     "Cibersecurity": { backgroundColor: "hsla(190, 90%, 50%, 0.6)", color: "black" },
     "Linux": { backgroundColor: "hsla(140, 0%, 10%, 0.3)" },
     "Cloud": { backgroundColor: "hsla(40, 90%, 50%, 0.6)", color: "black"},
@@ -22,4 +22,4 @@ const categoriesStyle = {
 }
 
 
-export { categoriesStyle };
+export default tagsStyles;

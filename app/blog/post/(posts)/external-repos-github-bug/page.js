@@ -2,7 +2,7 @@ import {Title, Title2, Title3, Title4, Paragraph, UList, Img, Link, Callout, Cod
 import {Color} from "@/components/MarkupWidgets/tags/Colors"
 import image1 from "@/blogImages/postsImages/github_submodules/githubscreenshootIssue.png"
 import image2 from "@/blogImages/postsImages/github_submodules/githubscreenshoot.png"
-import metadataList from "@/api/blog/postData"
+import metadataList from "@/api/blog/postsData"
 
 
 export const metadata = metadataList.external_repos_github_bug

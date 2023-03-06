@@ -3,7 +3,7 @@
 import sass from "./styles/PostMainContent.module.scss"
 import Image from "next/image"
 import {usePathname} from "next/navigation"
-import postData from "@/api/blog/postData"
+import postData from "@/api/blog/postsData"
 
 export default function PostMainContent(props){
 

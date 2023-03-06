@@ -1,6 +1,6 @@
 import sass from "./styles/PostAside.module.scss"
 import Image from "next/image"
-import {featuredPostData} from "@/api/blog/featured"
+import {featuredPostData} from "@/api/blog/featuredPost"
 import SocialButtons from "@/components/SocialButtons/SocialButtons"
 import Link from "next/link"
 

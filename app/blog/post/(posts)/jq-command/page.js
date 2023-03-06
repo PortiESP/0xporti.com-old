@@ -1,5 +1,5 @@
 import {Title, Title2, Title4, Paragraph, UList, Code, Section} from "@/components/MarkupWidgets/Tags.js"
-import metadataList from "@/api/blog/postData"
+import metadataList from "@/api/blog/postsData"
 
 
 export const metadata = metadataList.jq_command

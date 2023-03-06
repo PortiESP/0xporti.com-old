@@ -4,8 +4,8 @@ import sass from "./styles/Body.module.scss"
 import PostCard from "./PostCard" // Component
 import React, {useState, useEffect} from "react"
 // API Data
-import { categoriesStyle } from "@/api/blog/categoriesStyle"
-import postData from "@/api/blog/postData"
+import { categoriesStyle } from "@/api/blog/tagsStyles"
+import postData from "@/api/blog/postsData"
 
 
 

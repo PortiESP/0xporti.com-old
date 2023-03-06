@@ -34,7 +34,7 @@
             padding: 20px 0 0 0;
         }
     }
-    & .div__card_category{
+    & .div__card_tag{
         align-self: flex-end;
         // padding-right: 6px;
         // height: 40px;
@@ -106,7 +106,7 @@
     }
 }
 // ==================================================== Post category
-.div__card_category{
+.div__card_tag{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -118,7 +118,7 @@
 
     border-top: 2px solid rgba(112, 112, 112, 0.2);
 
-    & .div__category{
+    & .div__tag{
         color: $white;
         background-color: hsla(0, 0%, 64%, .4);
         
@@ -171,7 +171,7 @@
             font-size: 1.6rem;
         }
     }
-    .div__card_category{
+    .div__card_tag{
         font-size: .9rem;
     }
 }

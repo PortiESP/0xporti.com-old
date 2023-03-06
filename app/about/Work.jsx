@@ -7,7 +7,7 @@ import React, { useEffect, useRef, useState } from "react"
 import sass from "./styles/Work.module.scss"
 import Image from "next/image"
 // API Data
-import {workCardsData} from "@/api/landing/work"
+import {workCardsData} from "@/api/about/work"
 import Link from "next/link"
 
 

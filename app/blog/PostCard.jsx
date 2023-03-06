@@ -1,7 +1,7 @@
 import sass from "./styles/PostCard.module.scss"
 import Image from "next/image"
 import Link from "next/link"
-import { categoriesStyle } from "@/api/blog/categoriesStyle"
+import tagsStyles from "@/api/blog/tagsStyles"
 
 export default function PostCard(props){
 
@@ -24,9 +24,9 @@ export default function PostCard(props){
                         <p>{props.description}</p>
                     </div>
 
-                    {/* Category */}
-                    <div className={sass.div__card_category}>
-                        {props.tags.map( (tag, i) => <div key={i} className={sass.div__category} style={categoriesStyle[tag]} 
+                    {/* Tags */}
+                    <div className={sass.div__card_tag}>
+                        {props.tags.map( (tag, i) => <div key={i} className={sass.div__tag} style={tagsStyles[tag]} 
                                                                 onClick={ e => {
                                                                     e.preventDefault();
                                                                     props.setFilter( old => old.includes(tag) ? old : [...old, tag] )}

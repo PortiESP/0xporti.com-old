@@ -1,6 +1,6 @@
 import {Title, Title2, Paragraph, Callout, Code, Button, Section} from "@/components/MarkupWidgets/Tags.js"
 import iconGithub from "@/public/assets/icons/github_icon.png"
-import metadataList from "@/api/blog/postData"
+import metadataList from "@/api/blog/postsData"
 
 
 export const metadata = metadataList.instagram_unfollowers

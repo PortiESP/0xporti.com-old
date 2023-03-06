@@ -1,7 +1,7 @@
 import BubbleScrollBar from "@/components/BubbleScrollBar/BubbleScrollBar";
 import { Callout, Code, Img, Paragraph, Quote, Section, Title, Title2, Title3, UList, Url } from "@/components/MarkupWidgets/Tags";
 import { Gray } from "@/components/MarkupWidgets/tags/Colors";
-import metadataList from "@/api/blog/postData"
+import metadataList from "@/api/blog/postsData"
 
 
 const sections = [
