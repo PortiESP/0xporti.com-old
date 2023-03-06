@@ -145,7 +145,7 @@ const postData = {
         title: "Advanced windows shortcuts",
         tags: ["Windows", "Tips"],
         description: "Windows shortcuts for productivity",
-        // thumbnail: "windows_shortcuts.svg",
+        thumbnail: "windows_shortcuts.svg",
         keywords: ["windows", "shortcuts", "screenshoot"],
         hidden: "false",
         lastUpdate: "06/03/2023"
