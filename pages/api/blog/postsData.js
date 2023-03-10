@@ -149,6 +149,16 @@ const postData = {
         keywords: ["windows", "shortcuts", "screenshoot"],
         hidden: "false",
         lastUpdate: "06/03/2023"
+    },
+    memory_bedroom:{
+        id: "memory_bedroom",
+        title: "How do memory is managed, explained using your bedroom",
+        tags: ["Docs", "Binary"],
+        description: "How does data is stored and accessed from the disk to memory, explained using the similarities with the elements in your room and how you use them",
+        thumbnail: "memory_bedroom.svg",
+        keywords: ["bedroom", "memory", "disk", "hard-drive", "register"],
+        hidden: "false",
+        lastUpdate: "10/03/2023"
     }
    
 }
