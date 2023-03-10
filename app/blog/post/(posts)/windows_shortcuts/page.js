@@ -77,7 +77,7 @@ export default function Page(){ return (<>
 	<Section title="Windows apps" id="apps" sticky>
 		<Callout label="info">We have shortcuts for some windows apps such as the file explorer, magnifier, task manager, …</Callout>
 		<Quote title="Shortcut: Open pinned app (Task Bar) (N representes the index of the app in the task bar, the at the bottom of the screen)" color={QUOTE_COLOR}>
-			<KbdKey>WIN</KbdKey> + <b>N</b>
+			<KbdKey>WIN</KbdKey> + <b>Nº</b>
 		</Quote>
 		<Quote title="Shortcut: Open File Explorer" color={QUOTE_COLOR}>
 			<KbdKey>WIN</KbdKey> + <KbdKey>E</KbdKey>
