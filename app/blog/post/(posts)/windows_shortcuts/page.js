@@ -93,10 +93,11 @@ export default function Page(){ return (<>
 			<br/>
 			<br/>
 			<i>With the magnifier opened:</i>
-			<UList items={[
-			<><KbdKey>WIN</KbdKey> + <KbdKey>+</KbdKey> → Zoom In</>,
-			<><KbdKey>WIN</KbdKey> + <KbdKey>-</KbdKey> → Zoom Oun</>
-		]}/>
+			<br/>
+			<br/>
+			<KbdKey>WIN</KbdKey> + <KbdKey>+</KbdKey> → Zoom In
+			<br/>
+			<KbdKey>WIN</KbdKey> + <KbdKey>-</KbdKey> → Zoom Oun
 		</Quote>
 	</Section>
 
