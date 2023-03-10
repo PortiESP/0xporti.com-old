@@ -25,7 +25,7 @@ export default function Page(){
             <Img title="Bedroom illustration for memory" img={image1}/>
 
             <Callout label="warning">
-                We have to notice that in this example, when we take something from the self (<i>hard-drive</i>), that data doesnt disappear, we are making a copy, and the changes will be updated once we take that thing back to the self (<i>hard-drive</i>)
+                We have to notice that in this example, when we take something from the self (<i>hard-drive</i>), that data wont disappear, we are making a copy, and the changes will be updated once we take that thing back to the self (<i>hard-drive</i>)
             </Callout>
         </Section>
 
@@ -49,10 +49,10 @@ export default function Page(){
 
         <Section title="Buffering">
             <Paragraph>
-                Lets say that you are studing and you are writting in your notebook, you will write a line, then contine studing, then write another line, and so on until you finish studing and then you will close your notebook and storing it in the self (hard-drive); What we have done is called buffering
+                Lets say that you are studying and you are writing in your notebook, you will write a line, then continue studying, then write another line, and so on until you finish studying and then you will close your notebook and storing it in the self (hard-drive); What we have done is called buffering
             </Paragraph>
             <Callout label="info">
-                In this example its obvius that we will only store the notebook once we have finished working with it, doesnt matter if we wont be writting on it for a while, we want to avoid to stand up and store it to then have to take it again each time we are not writting on it 
+                In this example its obvious that we will only store the notebook once we have finished working with it, doesn't matter if we wont be writing on it for a while, we want to avoid to stand up and store it to then have to take it again each time we are not writing on it 
             </Callout>
         </Section>
 
