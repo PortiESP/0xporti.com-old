@@ -44,18 +44,18 @@ export default function Page(){
 
         <Section sticky id="section--download" title="Download arch">
 
-            <Url title="Arch official site" description="Official page to the 'archlinux' organization" src="https://archlinux.org/download/" img="https://i.gyazo.com/687a887319eb07b66202f2c321b47584.png"/>
-            <Img img="https://i.gyazo.com/97eeeec469487443d9caae46fa1a0322.png" title="Arch site screenshoot" ratio="5/2"/>
+            <Url title="Arch official site" description="Official page to the 'archlinux' organization" src="https://archlinux.org/download/" src="https://i.gyazo.com/687a887319eb07b66202f2c321b47584.png"/>
+            <Img src="https://i.gyazo.com/97eeeec469487443d9caae46fa1a0322.png" title="Arch site screenshoot" ratio="5/2"/>
             <Paragraph>
                 Then scroll to the mirrors section and download from the one you prefer
             </Paragraph>
-            <Img img="https://i.gyazo.com/6ebc2183fbb53f573e9948ed9ea00946.gif" title="Arch dowload gif" />
+            <Img src="https://i.gyazo.com/6ebc2183fbb53f573e9948ed9ea00946.gif" title="Arch dowload gif" />
             <Paragraph>
                 Once is downloaded we should then check the checksum of the downloaded file
                 <br/><br/>
                 The <b>checksums</b> are found on the same page as the mirrors
             </Paragraph>
-            <Img img="https://i.gyazo.com/20f5324384a48ed2d69061cf12c23a5d.png" title="Checksums screenshoot" ratio="7/2"/>
+            <Img src="https://i.gyazo.com/20f5324384a48ed2d69061cf12c23a5d.png" title="Checksums screenshoot" ratio="7/2"/>
             <Paragraph>
                 I will look for MD5 and SHA1 hashes matching my file with the CMD command <Code inline>certutil</Code> , from the downloads path
             </Paragraph>
@@ -68,7 +68,7 @@ export default function Page(){
                 <br/>
                 certutil -hashfile archlinux-2022.08.05-x86_64.iso sha1
             </Code>
-            <Img img="https://i.gyazo.com/6f3edfc965913a85cdc533ae225e8192.png" title="Checksumms check screenshoot" />
+            <Img src="https://i.gyazo.com/6f3edfc965913a85cdc533ae225e8192.png" title="Checksumms check screenshoot" />
             <Callout label="danger" labelData={{text: "Safety warning!"}}>Please, take a moment to go through this step to ensure that you are downloading a safe software</Callout>
             
         </Section>
@@ -81,12 +81,12 @@ export default function Page(){
                 <br/>
                 In my case i will use the *Raspberry PI Imager*, this software is intended to be for installing Raspbian but it allows us to mount any ISO file and also because I trust the Raspbian developers so I will use their software
             </Paragraph>
-            <Url title="Raspbian download page" description="Official page of the raspberry PI organization at its software download section" src="https://www.raspberrypi.com/software/" img="https://i.gyazo.com/821e1264a50d3c7249a871541c49d696.png"/>
-            <Img img="https://i.gyazo.com/64bc08fa691f8475bc6a742b11e56d1f.png" title="Raspbian imager" />
+            <Url title="Raspbian download page" description="Official page of the raspberry PI organization at its software download section" src="https://www.raspberrypi.com/software/" src="https://i.gyazo.com/821e1264a50d3c7249a871541c49d696.png"/>
+            <Img src="https://i.gyazo.com/64bc08fa691f8475bc6a742b11e56d1f.png" title="Raspbian imager" />
             <Paragraph>
                 To mount the Arch ISO on an external mass storage {"(USB)"} device we will choose the <Code inline>Choose OS</Code> option and then choose the <Code inline>Use custom</Code> option then look for the Arch ISO {"we’ve"} downloaded before, the choose the external device where to write the image and then click on write
             </Paragraph>
-            <Img img={image1} title="Raspbian imager" />
+            <Img src={image1} title="Raspbian imager" />
             <Paragraph>
                 Once the mounting finishes, the device will be automaticaly ejected
             </Paragraph>
@@ -103,12 +103,12 @@ export default function Page(){
             <Paragraph>
                 Now we will <b>insert the drive</b> {"(USB)"} in the PC where we want to install Arch and start it, in case you are using a virtual machine look how to insert virtual drive on it
             </Paragraph>
-            <Img img="https://i.gyazo.com/c0b0da65776fadf5ccc9f69bffdabd54.gif" title="VM virtualbox gif" />
+            <Img src="https://i.gyazo.com/c0b0da65776fadf5ccc9f69bffdabd54.gif" title="VM virtualbox gif" />
 
             <Paragraph>
                 Once we have inserted the drive with the ISO mounted, reboot the PC and a screen similar to this should appear, hit ENTER over the <Code inline>Arch Linux install medium...</Code>
             </Paragraph>
-            <Img img="https://i.gyazo.com/02e74f78fd8904d9bd8ad2578b7a3b25.png" title="Boot screen" />
+            <Img src="https://i.gyazo.com/02e74f78fd8904d9bd8ad2578b7a3b25.png" title="Boot screen" />
 
             <Paragraph>
                 The necesary software needed by the installator envionrement will start downloading...
@@ -116,7 +116,7 @@ export default function Page(){
             <Callout label="info">
                 Once the packages are installed we will be prompted with a terminal corresponding to a installation enviorement installed on the USB that acts as a live OS running on the USB with the sofware necesary to install Arch on the PC and get done the basic setup
             </Callout>
-            <Img img="https://i.gyazo.com/e037a6e2195f04445bb2925a39187f8b.png" title="Installer terminal" ratio="5/2"/>
+            <Img src="https://i.gyazo.com/e037a6e2195f04445bb2925a39187f8b.png" title="Installer terminal" ratio="5/2"/>
             <br/>
             
         </Section>
@@ -170,7 +170,7 @@ export default function Page(){
                         <Gray># Print scan result</Gray><br/>
                         <Gray>{"[iwctl]#"}</Gray> station wlan0 get-networks
                     </Code>
-                    <Img img="https://i.gyazo.com/58de1cc3beacb67942cbcd9f72ee7643.jpg" title="Networks list"  />
+                    <Img src="https://i.gyazo.com/58de1cc3beacb67942cbcd9f72ee7643.jpg" title="Networks list"  />
                     <Paragraph>
                         Choose the network SSID that you want to connect to and connect using the following command
                     </Paragraph>
@@ -197,8 +197,8 @@ export default function Page(){
                 <Paragraph>
                     Here we have the example of a <i>successful</i> ping and a <i>failed</i> ping request
                 </Paragraph>
-                <Img img="https://i.gyazo.com/608ca49dfecec9c30d3b5024cf1c8e4b.png" title="Successful ping" ratio="3/1"/> 
-                <Img img="https://i.gyazo.com/5859cd93a2f2ab5334bfc2251acae1a7.png" title="Failed ping" ratio="3/1"/> 
+                <Img src="https://i.gyazo.com/608ca49dfecec9c30d3b5024cf1c8e4b.png" title="Successful ping" ratio="3/1"/> 
+                <Img src="https://i.gyazo.com/5859cd93a2f2ab5334bfc2251acae1a7.png" title="Failed ping" ratio="3/1"/> 
             </Block>
 
             <Paragraph>
@@ -220,7 +220,7 @@ export default function Page(){
                 <Code>
                     archinstall
                 </Code>
-                <Img img="https://i.gyazo.com/18f334cc0cbec48d7a31ec11a62893d5.png" title="Archinstall menu"  />
+                <Img src="https://i.gyazo.com/18f334cc0cbec48d7a31ec11a62893d5.png" title="Archinstall menu"  />
                 <Paragraph>
                     Follow this interface to configure you arch installation. Some of the parameters depend on the user, like the timezone, username, etc....<br/>
                     Here I have a few fields explained for you, <i>some of them will be explained in depth later</i>
@@ -283,13 +283,13 @@ export default function Page(){
                         The next step is choosing where we want to install the Arch OS, we will select <Code inline>Drive(s)</Code>, a list of all the mass storage devices detected will appear abd we will choose where we want to install the OS<br/>
                         In my case I am using a VM with 25GB of storage but for you it should appear your Hard Drive
                     </Paragraph>
-                    <Img img="https://i.gyazo.com/e359f329a26aea5c146746b43e78580f.png" title="Drives option"  />
+                    <Img src="https://i.gyazo.com/e359f329a26aea5c146746b43e78580f.png" title="Drives option"  />
                     <br/>
-                    <Img img="https://i.gyazo.com/366234667a6ec845175b9704a07fc7b9.png" title="Choosing my drive"  />
+                    <Img src="https://i.gyazo.com/366234667a6ec845175b9704a07fc7b9.png" title="Choosing my drive"  />
                     <Paragraph>
                         After choosing a drive, <Code inline>Disk layout</Code> option should be available:
                     </Paragraph>
-                    <Img img="https://i.gyazo.com/a86b740a364ab011ef3acb9d587843f1.png" title="Disk layout option"  />
+                    <Img src="https://i.gyazo.com/a86b740a364ab011ef3acb9d587843f1.png" title="Disk layout option"  />
                     <Paragraph>
                         Now we will setup the partition table, since we are in the <i>{'"easy"'}</i> setup method, we wont take much time on this, we will use a suggested partition table<br/>
                     </Paragraph>
@@ -299,11 +299,11 @@ export default function Page(){
                     <Paragraph>
                         Follow the next steps to create a <i>suggested</i> partition table (<i>disk layout</i>):
                     </Paragraph>
-                    <Img img="https://i.gyazo.com/e8670532b42c527a59b8df588e0d2a92.png" title="Disk layout menu 1"  /><br/>
-                    <Img img="https://i.gyazo.com/b8f7d7407222988abdbcd1099fc99726.png" title="Disk layout menu 2"  /><br/>
-                    <Img img="https://i.gyazo.com/9a9147e455a9ba7438f67bf4a7f0ca21.png" title="Disk layout menu 3"  /><br/>
-                    <Img img="https://i.gyazo.com/737edbe2c1c8b4b7b4332f3969a35456.png" title="Disk layout menu 4"  /><br/>
-                    <Img img="https://i.gyazo.com/1cde1c6c0fe78be34462d9af3a5a2f6b.png" title="Disk layout menu 5"  /><br/>
+                    <Img src="https://i.gyazo.com/e8670532b42c527a59b8df588e0d2a92.png" title="Disk layout menu 1"  /><br/>
+                    <Img src="https://i.gyazo.com/b8f7d7407222988abdbcd1099fc99726.png" title="Disk layout menu 2"  /><br/>
+                    <Img src="https://i.gyazo.com/9a9147e455a9ba7438f67bf4a7f0ca21.png" title="Disk layout menu 3"  /><br/>
+                    <Img src="https://i.gyazo.com/737edbe2c1c8b4b7b4332f3969a35456.png" title="Disk layout menu 4"  /><br/>
+                    <Img src="https://i.gyazo.com/1cde1c6c0fe78be34462d9af3a5a2f6b.png" title="Disk layout menu 5"  /><br/>
                 </Toggle>
 
                 <Toggle title="Profile">
@@ -318,7 +318,7 @@ export default function Page(){
                 <Paragraph>
                     This is my final configuration...
                 </Paragraph>
-                <Img img="https://i.gyazo.com/c6519b240dd42fd6d50304c1858bb252.png" title="Final arch setup"  /><br/>
+                <Img src="https://i.gyazo.com/c6519b240dd42fd6d50304c1858bb252.png" title="Final arch setup"  /><br/>
                 <Paragraph>
                     Then click install, if every thing is ok, a summary in JSON format should apper with all your configurations and the installation should start
                 </Paragraph>
@@ -326,7 +326,7 @@ export default function Page(){
                 <Callout label="warning">
                     The a message will prompt (would you like to chroot…) this is optional if you have followed the steps above, but you can do it if you want to check the settings made before rebooting, you can follow some step of the manual method from this point for additional configuration
                 </Callout>
-                <Img img="https://i.gyazo.com/89675f199d588835812fdc1049a5e37d.png" title="Chroot message" ratio="6/1" /><br/>
+                <Img src="https://i.gyazo.com/89675f199d588835812fdc1049a5e37d.png" title="Chroot message" ratio="6/1" /><br/>
                 <Paragraph>
                     If you have selected <Code inline>yes</Code> you will be returned to the terminal and here you can run <Code inline>chroot</Code>
                 </Paragraph>
@@ -351,7 +351,7 @@ export default function Page(){
                     <Paragraph>
                         In my case I will install it in the <Code inline>sda</Code> drive of 25GB
                     </Paragraph>
-                    <Img img="https://i.gyazo.com/c02e307c16d1090fef731364c7056af1.png" title="lsdik screenshoot"  />
+                    <Img src="https://i.gyazo.com/c02e307c16d1090fef731364c7056af1.png" title="lsdik screenshoot"  />
                     <Paragraph>
                         Now its time to create a new partition table on the drive, you can create your own table if you know how to do it. My table for the example will be the following:
                     </Paragraph>
@@ -433,7 +433,7 @@ export default function Page(){
                             <Code>
                                 p                        <Gray># Print partion table</Gray><br/>
                             </Code>
-                            <Img img="https://i.gyazo.com/9f1bc8435fe0a9c5c19294efedb0fc54.png" title="Example partition table" ratio="2/1"/>
+                            <Img src="https://i.gyazo.com/9f1bc8435fe0a9c5c19294efedb0fc54.png" title="Example partition table" ratio="2/1"/>
                             
                             <Paragraph>
                                 If everything looks right, its time save the changes
@@ -522,9 +522,9 @@ export default function Page(){
                         grub-mkconfig -o /boot/grub/grub.cfg<br/>
                         mkinitcpio -P
                     </Code>
-                    <Img img="https://i.gyazo.com/1fc375d53292bb937aaf53411701bd10.jpg" title="Successful grub installation" />
+                    <Img src="https://i.gyazo.com/1fc375d53292bb937aaf53411701bd10.jpg" title="Successful grub installation" />
                     <Paragraph>In case of <b>issues</b> installing the bootloader I recommend you look here:</Paragraph>
-                    <Url title="GRUB Troubleshooting" description="A post where some users explain some issues with GRUB" img="https://i.gyazo.com/09d59b381cc8fe5ba852b7b08d1007c6.png" src="https://unix.stackexchange.com/questions/405472/cannot-find-efi-directory-issue-with-grub-install" />
+                    <Url title="GRUB Troubleshooting" description="A post where some users explain some issues with GRUB" src="https://i.gyazo.com/09d59b381cc8fe5ba852b7b08d1007c6.png" src="https://unix.stackexchange.com/questions/405472/cannot-find-efi-directory-issue-with-grub-install" />
                 </Toggle>
 
 
@@ -534,7 +534,7 @@ export default function Page(){
                         nano /etc/locale.gen
                     </Code>
                     <Callout label="tip">You can use <Code inline>CTRL+W</Code> to search for strings in the file, <Code inline>CTRL+S</Code> to save changes and <Code inline>CTRL+C</Code> to exit editor while using <Code inline>nano</Code></Callout>
-                    <Img img="https://i.gyazo.com/daf9f52e5eda0e122c21bb24de4ecf54.png" title="Language uncommented" ratio="5/1" />
+                    <Img src="https://i.gyazo.com/daf9f52e5eda0e122c21bb24de4ecf54.png" title="Language uncommented" ratio="5/1" />
                     <Paragraph>Then execute the next command to generate the data for the uncommented files</Paragraph>
                     <Paragraph>In the example I have uncommented the spanish language</Paragraph>
                     <Code caption="Config system language">
@@ -652,7 +652,7 @@ export default function Page(){
             <Paragraph>If everything if correct, Arch should be 🎉 <Color lightblue><b>installed and running</b></Color> 🎉</Paragraph>
 
             <Paragraph>Once we have started up the PC the Arch boot screen will prompt, just select <b>Arch Linux</b> to start your new Arch Linux OS</Paragraph>
-            <Img img="https://i.gyazo.com/e46130a57cb8f86c7130b801d987c7bd.jpg" title="Arch boot screen"/>
+            <Img src="https://i.gyazo.com/e46130a57cb8f86c7130b801d987c7bd.jpg" title="Arch boot screen"/>
 
             <Toggle title="WIFI troubleshooting">
                 <Paragraph>If something goes wrong with the wireless connection we might need to configure manualy</Paragraph>

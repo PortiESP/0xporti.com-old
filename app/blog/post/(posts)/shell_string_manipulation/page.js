@@ -116,7 +116,7 @@ export default function Page(){ return (<>
             <Gray># Match basic substring</Gray><br/>
             cat paragraph.txt | grep computers
         </Code>
-        <Img img="https://i.gyazo.com/8eecacb3b8470bc2ca347dd4f8fa1270.png" alt="Examples" height="300px"/>
+        <Img src="https://i.gyazo.com/8eecacb3b8470bc2ca347dd4f8fa1270.png" alt="Examples" height="300px"/>
         
     </Section>
 

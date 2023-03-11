@@ -68,9 +68,9 @@ export default function Page(){ return (
                 For the moment the web page is divided in two parts: the <i>portfolio</i> and the <i>blog</i>
             </Paragraph>
             
-            <Img img={image1} alt="Screenshoot of the portfolio" caption="Portfolio" ratio="9/4"/>
+            <Img src={image1} alt="Screenshoot of the portfolio" caption="Portfolio" ratio="9/4"/>
             <br />
-            <Img img={image2} alt="Screenshoot of the blog" caption="Blog" ratio="9/4"/>
+            <Img src={image2} alt="Screenshoot of the blog" caption="Blog" ratio="9/4"/>
         </Section>
 
         <br/>
@@ -108,7 +108,7 @@ export default function Page(){ return (
 
             </Paragraph>
             <br/>
-            <Img img={image3} alt="API Screenshoot" caption="API Query screenshoot"/>
+            <Img src={image3} alt="API Screenshoot" caption="API Query screenshoot"/>
         </Section>
 
         <br/>

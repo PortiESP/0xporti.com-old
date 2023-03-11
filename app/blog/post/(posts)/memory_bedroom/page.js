@@ -22,7 +22,7 @@ export default function Page(){
                 You must take a a notebook from your self (<i>hard-drive</i>) before start working on it, then you bring it to your desk (<i>memory</i>) and with your hands (<i>registers</i>) you will be able to actually write in your notebook. Once you have finished, you will close the notebook and take it from your desk (<i>memory</i>) back to your self (<i>hard-drive</i>)
             </Paragraph>
 
-            <Img title="Bedroom illustration for memory" img={image1}/>
+            <Img title="Bedroom illustration for memory" src={image1}/>
 
             <Callout label="warning">
                 We have to notice that in this example, when we take something from the self (<i>hard-drive</i>), that data wont disappear, we are making a copy, and the changes will be updated once we take that thing back to the self (<i>hard-drive</i>)

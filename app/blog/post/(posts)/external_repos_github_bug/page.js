@@ -22,7 +22,7 @@ export default function Page(){ return(
                 the cloned repos directory was empty and replaced by a folder with an <i>arrow</i> icon. Apart from that, when I clone the repo from another computer those 
                 directories were empty
             </Paragraph>
-            <Img img={image1} alt="Screenshoot form github with the issue solved"/>
+            <Img src={image1} alt="Screenshoot form github with the issue solved"/>
 
         </Section>
         
@@ -40,7 +40,7 @@ export default function Page(){ return(
             <Code caption="Example">
                 <Color fuchsia>git</Color> <Color red>submodule</Color> <Color red>add</Color> <Color deepskyblue>https://github.com/PortiESP/BubbleScrollBar.git</Color>
             </Code>
-            <Img img={image2} alt="Screenshoot form github with the issue solved"/>
+            <Img src={image2} alt="Screenshoot form github with the issue solved"/>
 
             <Title4>Fetch submodules repos</Title4>
             <Paragraph>

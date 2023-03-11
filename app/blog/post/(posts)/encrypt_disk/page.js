@@ -58,7 +58,7 @@ export default function Page() { return (<>
         <Code caption="Output drives in TREE format">
             lsblk -T
         </Code>
-        <Img img="https://i.gyazo.com/d141f8a673a37ba1bd0e5515cf14e394.jpg" title="Partitions tree"/>
+        <Img src="https://i.gyazo.com/d141f8a673a37ba1bd0e5515cf14e394.jpg" title="Partitions tree"/>
         <Callout>For my example I will choose <Code inline>/dev/sdb1</Code> as the partition to encrypt</Callout>
     </Section>
 
@@ -100,7 +100,7 @@ export default function Page() { return (<>
         <Paragraph>
             Now we can check with <Code inline>lsblk -T</Code> our disk partition and we will see our logical partition inside the encrypted partition once it is decrypted
         </Paragraph>
-        <Img img="https://i.gyazo.com/ebc7c16a04c88e704d937c044cc0b86e.jpg" title="Disk tree" ratio="9/1"/>
+        <Img src="https://i.gyazo.com/ebc7c16a04c88e704d937c044cc0b86e.jpg" title="Disk tree" ratio="9/1"/>
         <Paragraph>
             Now it is time to format the logical partition as <i>ext4</i> to start storing data inside it. Logical partitions are reprensented as devices inside the mapper directory
         </Paragraph>
@@ -162,7 +162,7 @@ export default function Page() { return (<>
         <Code>
             lsblk -o NAME,UUID
         </Code>
-        <Img img="https://i.gyazo.com/c2764be1e839393280f0c91654f58897.jpg" title="Partitions UUIDs" ratio="3/1"/>
+        <Img src="https://i.gyazo.com/c2764be1e839393280f0c91654f58897.jpg" title="Partitions UUIDs" ratio="3/1"/>
 
         <Title3>Decrypt partition</Title3>
         <Paragraph>

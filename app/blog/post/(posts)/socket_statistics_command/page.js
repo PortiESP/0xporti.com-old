@@ -42,7 +42,7 @@ export default function Page(){ return (<>
                 <Code>
                     ss
                 </Code>
-                <Img img="https://i.gyazo.com/26dbbadb5e3ff1f089e96bdce393af4c.png" height="400px"/>
+                <Img src="https://i.gyazo.com/26dbbadb5e3ff1f089e96bdce393af4c.png" height="400px"/>
                 <Paragraph>
                     This command will print a table with the following information
                 </Paragraph>
@@ -76,7 +76,7 @@ export default function Page(){ return (<>
                     <Code inline>-p</Code> ~ Prints the PID of the process that owns the socket<br/>
                     <Code inline>-s</Code> ~ Prints a summary of the sockets by connection type <i>{"(TCP, UDP, Raw, etc...)"}</i><br/>
                 </Paragraph>
-                <Img img="https://i.gyazo.com/dee39bfeb2477ebc1f357065e15066da.png" height="200px" alt="Example Image"/>
+                <Img src="https://i.gyazo.com/dee39bfeb2477ebc1f357065e15066da.png" height="200px" alt="Example Image"/>
                 <Paragraph>
                     <Code inline>-4</Code> | <Code inline>-6</Code> ~ Prints addresses as its IPv4/IPv6 format<br/>
                     <Code inline>-n</Code> ~ No hostname resolving {"(show always the address)"}<br/>
