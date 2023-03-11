@@ -44,6 +44,7 @@ export default function Page(){
                 So if we write data in the allocated memory it will be written from the lowest address of the allocated chunk to the higher address
             </Paragraph>
 
+            <br/>
             <Hr/>
             <br/>
 
@@ -62,6 +63,9 @@ export default function Page(){
                 <Paragraph>Each time a function returns, the stack frame of that function is poped/removed from the stack, and the Top of the Stack is moved</Paragraph>
             </ImgTextAside>
 
+                <br/>
+                <Hr/>
+                <br/>
 
             <ImgTextAside title="Stack Frame" src={image_stack2} separator imgProportion="35%" ratio="1/2">
                 <Title3>The stack frames layout</Title3>
@@ -80,6 +84,9 @@ export default function Page(){
                 </Quote>
             </ImgTextAside>
 
+                <br/>
+                <Hr/>
+                <br/>
 
             <ImgTextAside title="Pointer Offsets" src={image_stack3} separator imgProportion="35%" ratio="2/5">
                 <Title3>Accessing data with pointer offsets. ESP & EBP</Title3>
