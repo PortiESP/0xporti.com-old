@@ -159,6 +159,16 @@ const postData = {
         keywords: ["bedroom", "memory", "disk", "hard-drive", "register"],
         hidden: "false",
         lastUpdate: "10/03/2023"
+    },
+    memory_layout_stack:{
+        id: "memory_layout_stack",
+        title: "Memory Layout: The Stack",
+        tags: ["Docs", "Binary"],
+        description: "As part of the Memory Layout series, this posts explains concepts about the stack, its structure, stack frames, pointers, ...",
+        thumbnail: "memory_layout_stack.svg",
+        keywords: ["stack", "memory", "layout", "frame", "register", "pointers", "structure", "ebp", "top of the stack", "variables", "stack frame"],
+        hidden: "false",
+        lastUpdate: "11/03/2023"
     }
    
 }
