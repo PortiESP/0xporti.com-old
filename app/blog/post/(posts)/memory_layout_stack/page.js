@@ -18,7 +18,7 @@ export default function Page(){
         </Callout>
 
         <Callout label="warning">
-            <Title3>Notice the difference between x32 and x64 architectures:</Title3>
+            <Title3>Difference between x32 and x64 architectures:</Title3>
 
             <UList items={[
                 <>The <b>pointers size</b> will use 4 Bytes in x32 archs, while in x64 pointers use 8 Bytes</>,
