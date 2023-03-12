@@ -1,7 +1,27 @@
-import ImgTextAside from "@/components/MarkupWidgets/tags/ImgTextAsise";
+import { Comment, Paragraph } from "@/components/MarkupWidgets/Tags";
+
 
 export default function Page(){
     return (<>
-        <ImgTextAside title="test" src="https://yt3.googleusercontent.com/ytc/AL5GRJW4DDi78xlY1NrlPt-XPNsitNIceSM8Y6QpmW7LxQ=s88-c-k-c0x00ffffff-no-rj"/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <Paragraph>
+        Lets comment something: <Comment comment="This is a comment, some more info, some more info to fill the line">hello</Comment> some more text
+
+        </Paragraph>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
     </>)
 }

@@ -44,7 +44,7 @@ export default function Page(){
 
         <Section sticky id="section--download" title="Download arch">
 
-            <Url title="Arch official site" description="Official page to the 'archlinux' organization" src="https://archlinux.org/download/" src="https://i.gyazo.com/687a887319eb07b66202f2c321b47584.png"/>
+            <Url title="Arch official site" description="Official page to the 'archlinux' organization" src="https://archlinux.org/download/" img="https://i.gyazo.com/687a887319eb07b66202f2c321b47584.png"/>
             <Img src="https://i.gyazo.com/97eeeec469487443d9caae46fa1a0322.png" title="Arch site screenshoot" ratio="5/2"/>
             <Paragraph>
                 Then scroll to the mirrors section and download from the one you prefer
@@ -81,7 +81,7 @@ export default function Page(){
                 <br/>
                 In my case i will use the *Raspberry PI Imager*, this software is intended to be for installing Raspbian but it allows us to mount any ISO file and also because I trust the Raspbian developers so I will use their software
             </Paragraph>
-            <Url title="Raspbian download page" description="Official page of the raspberry PI organization at its software download section" src="https://www.raspberrypi.com/software/" src="https://i.gyazo.com/821e1264a50d3c7249a871541c49d696.png"/>
+            <Url title="Raspbian download page" description="Official page of the raspberry PI organization at its software download section" src="https://www.raspberrypi.com/software/" img="https://i.gyazo.com/821e1264a50d3c7249a871541c49d696.png"/>
             <Img src="https://i.gyazo.com/64bc08fa691f8475bc6a742b11e56d1f.png" title="Raspbian imager" />
             <Paragraph>
                 To mount the Arch ISO on an external mass storage {"(USB)"} device we will choose the <Code inline>Choose OS</Code> option and then choose the <Code inline>Use custom</Code> option then look for the Arch ISO {"we’ve"} downloaded before, the choose the external device where to write the image and then click on write
@@ -524,7 +524,7 @@ export default function Page(){
                     </Code>
                     <Img src="https://i.gyazo.com/1fc375d53292bb937aaf53411701bd10.jpg" title="Successful grub installation" />
                     <Paragraph>In case of <b>issues</b> installing the bootloader I recommend you look here:</Paragraph>
-                    <Url title="GRUB Troubleshooting" description="A post where some users explain some issues with GRUB" src="https://i.gyazo.com/09d59b381cc8fe5ba852b7b08d1007c6.png" src="https://unix.stackexchange.com/questions/405472/cannot-find-efi-directory-issue-with-grub-install" />
+                    <Url title="GRUB Troubleshooting" description="A post where some users explain some issues with GRUB" img="https://i.gyazo.com/09d59b381cc8fe5ba852b7b08d1007c6.png" src="https://unix.stackexchange.com/questions/405472/cannot-find-efi-directory-issue-with-grub-install" />
                 </Toggle>
 
 
