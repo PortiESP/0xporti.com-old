@@ -25,14 +25,22 @@ export const metadata = {
   },
   
   // OpenGraph
-  OpenGraph: {
+  openGraph: {
     title: "0xPorti",
     description: "Pentesting, Binary Exploitation, Software, ....",
     type: "article",
-    image: "/assets/images/0xPorti_logo_icon.png",
-    alt: "0xPorti Icon",
-    height: "850",
-    width: "850",
+    images: [
+      {
+        url: "/assets/images/0xPorti_logo_icon.png",
+        height: "850",
+        width: "850",
+        alt: "0xPorti Icon"
+      },
+      {
+        url: "/assets/images/0xPorti_Logo.svg",
+        alt: "0xPorti Logo"
+      },
+    ],
     locale: "en_ES"
   },
 
