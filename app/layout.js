@@ -21,7 +21,7 @@ export const metadata = {
     creator: "@PortiiRM",
     url: "https://www.0xPorti.com",
     site: "https://www.0xPorti.com",
-    images: ["/assets/images/0xPorti_logo_icon.png"],
+    images: ["/assets/images/0xPorti_logo_icon_margin.png"],
     title: "0xPorti",
   },
   
@@ -34,7 +34,7 @@ export const metadata = {
     locale: "en_ES",
     images: [
       {
-        url: "/assets/images/0xPorti_logo_icon.png",
+        url: "/assets/images/0xPorti_logo_icon_margin.png",
         height: "850",
         width: "850",
         alt: "0xPorti Icon"
@@ -48,9 +48,9 @@ export const metadata = {
 
   // Icons
   icons: {
-    icon: "/assets/images/0xPorti_logo_icon.png",
-    shortcut: "/assets/images/0xPorti_logo_icon.png",
-    apple: "/assets/images/0xPorti_logo_icon.png",
+    icon: "/assets/images/0xPorti_logo_icon_margin.png",
+    shortcut: "/assets/images/0xPorti_logo_icon_margin.png",
+    apple: "/assets/images/0xPorti_logo_icon_margin.png",
   },
 
   // Robots
