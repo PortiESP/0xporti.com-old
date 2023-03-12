@@ -48,7 +48,7 @@ export const metadata = {
 
   // Icons
   icons: {
-    icon: "/assets/images/0xPorti_logo_icon_margin.png",
+    icon: "/favicon.ico",
     shortcut: "/assets/images/0xPorti_logo_icon_margin.png",
     apple: "/assets/images/0xPorti_logo_icon_margin.png",
   },

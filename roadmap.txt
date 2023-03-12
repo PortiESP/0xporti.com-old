@@ -1,2 +1,35 @@
 - Posts inside serachbar
-- Work section (/about) update images
+
+DONE:
+    - Blog page
+        - Search bar
+        - Post cards
+        - Posts tags
+        - Tags styles
+        - Posts filter
+    - About page
+        - Welcome section
+        - Skill section
+        - Work section
+    - Header
+    - Footer
+    - Resources page
+        - Resources creators cards
+        - Docs, Icons, BGs, ...
+    - Responsive design
+    - Featured post
+    - Nice design & animations
+    - MarkdownWidgets
+    - Redesign thumbnails style
+    - Social media accounts
+    - Blog aside
+    - Meta tags (SEO)
+    - Peformance (Lighthouse)
+
+TO-DO:
+    - Posts search bar
+    - Work section (/about) 
+        - Update info
+        - Update thumbnails
+    - Landing page
+    - Profile Picture
