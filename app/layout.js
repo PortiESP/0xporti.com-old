@@ -19,6 +19,7 @@ export const metadata = {
   twitter: {
     card: "summary",
     creator: "@PortiiRM",
+    url: "https://www.0xPorti.com",
     site: "https://www.0xPorti.com",
     images: ["/assets/images/0xPorti_logo_icon.png"],
     title: "0xPorti",
@@ -27,8 +28,10 @@ export const metadata = {
   // OpenGraph
   openGraph: {
     title: "0xPorti",
+    url: "https://www.0xporti.com/blog",
     description: "Pentesting, Binary Exploitation, Software, ....",
-    type: "article",
+    type: "website",
+    locale: "en_ES",
     images: [
       {
         url: "/assets/images/0xPorti_logo_icon.png",
@@ -41,7 +44,6 @@ export const metadata = {
         alt: "0xPorti Logo"
       },
     ],
-    locale: "en_ES"
   },
 
   // Icons
