@@ -5,13 +5,12 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    // overflow: hidden;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 
     & .div__thumbnail{
         position: relative;
         width: 100%;
-        height: 160px;
+        height: 200px;
         overflow: hidden;
         
         & img:nth-child(1){
@@ -24,10 +23,8 @@
     }
 
     & .div__data{
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%) translateY(50%);
+        position: relative;
+        width: 100%;
     }
 }
 
@@ -35,15 +32,15 @@
 
 .div__resource{
     border-radius: 4px;
+
     
     & .div__data{
         display: flex;
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
         gap: 4px;
         padding: 10px;
         background: #333d;
-        width: 90%;
         border-radius: 5px;
         
 
@@ -53,6 +50,8 @@
             border-radius: 4px;
             font-weight: 500;
             width: 100%;
+
+            color:#94adff;
             background: #444;
         }
         & p{
@@ -68,3 +67,5 @@
         
     }
 }
+
+

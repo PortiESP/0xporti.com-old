@@ -8,7 +8,8 @@
                         "@/public/*": ["./public/*"],
                         "@/api/*": ["./pages/api/*"],
                         "@/blogImages/*": ["./public/assets/blog/*"],
-                        "@/postsImages/*": ["./public/assets/blog/postsImages/*"]
+                        "@/postsImages/*": ["./public/assets/blog/postsImages/*"],
+                        "@/resources/*": ["./public/assets/resources/*"],
                 },
         },
         "exclude": [

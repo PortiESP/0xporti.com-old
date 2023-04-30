@@ -10,10 +10,10 @@ import { useState } from "react"
 
 
 function ResourceElement({data, root}){
-    return (<Link href={`${root}/${data.url}`}><div className={sassE.div__resource}>
+    return (<Link href={`${root||""}${data.url}`}><div className={sassE.div__resource}>
         <div className={sassE.div__thumbnail}>
-            <Image src={data.image} fill alt="thumbnail blur"/>
-            <Image src={data.image} fill alt="thumbnail"/>
+            <Image src={data.image ||data.url} fill alt="thumbnail blur"/>
+            <Image src={data.image ||data.url} fill alt="thumbnail"/>
         </div>
         <div className={sassE.div__data}>
             <h3>{data.title}</h3>
@@ -37,7 +37,6 @@ export default function ResourceFinder(props){
 
     // Filtered data
     const filtered = props.elements?.filter(edata=>{
-        console.log(edata)
         return [  // Filters list
             search ? JSON.stringify(edata, ((k,v)=>k==="url"?undefined:v))  // Stringify the JSON but skip the "url" key
                 .toLowerCase()  // Ignore case
@@ -56,9 +55,7 @@ export default function ResourceFinder(props){
             <div className={sass.div__header_options}>
                 <select value={category} onChange={e => setCategory(e.target.value)}>
                     {
-                        props.categories?.length && 
-                        ["All", ...props.categories].map(e=><option key={e} value={e.toLowerCase()}>{e}</option>)
-                        
+                        ["All", ...props.categories||[]].map(e=><option key={e} value={e.toLowerCase()}>{e}</option>)
                     }
                 </select>
             </div>

@@ -1,11 +1,10 @@
 .div__wrap{
-    min-height: 100vh;
-
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
 
-    padding-top: 20vh;
+    padding-top: 10vh;
 }
 
 .h2__title{
@@ -14,6 +13,13 @@
 }
 
 .div__resourcefinder{
+    position: relative;
     width: 80%;
-    min-height: 100px;
+}
+
+
+@media (max-width:1100px){
+    .div__resourcefinder{
+        width: 95%;
+    }
 }
