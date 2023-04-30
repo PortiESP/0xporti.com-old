@@ -32,8 +32,8 @@ export default function External(){
 
             <div className={sass.div__sections_wrap}>
                 {
-                    sections.map( section => 
-                        <Link href={section.url}>
+                    sections.map( (section,i) => 
+                        <Link href={section.url} key={i}>
                             <div className={sass.div__section}>
                                 <h3>{section.title}</h3>
                                 <p>{section.description}</p>
