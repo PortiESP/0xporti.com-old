@@ -1,0 +1,19 @@
+.div__wrap{
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding-top: 20vh;
+}
+
+.h2__title{
+    font-size: 4em;
+    padding: 40px 0;
+}
+
+.div__resourcefinder{
+    width: 80%;
+    min-height: 100px;
+}
