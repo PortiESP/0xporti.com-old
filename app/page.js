@@ -6,7 +6,7 @@ export default function Landing(){
         <head>
             <title>0xPorti</title>
         </head>
-        <div >
+        <div>
             
         </div>
     </>
