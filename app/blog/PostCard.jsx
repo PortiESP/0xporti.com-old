@@ -10,7 +10,7 @@ export default function PostCard(props){
     return (
         <div className={sass.div__postCard_wrap}>
             <div className={sass.div__postCard}>
-                <Link href={`/blog/post/${props.id}`}>
+                <Link href={`/blog/post/${props.id}`} prefetch={false}>
                     
                     {/* Thumbnail */}
                     <div className={sass.div__card_image}>
