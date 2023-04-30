@@ -1,5 +1,5 @@
 import { Callout, Img, Paragraph, Quote, Section, Title } from "@/components/MarkupWidgets/Tags";
-import image1 from "@/postsImages/memory_bedroom/Memory_comparation.jpg"
+import image1 from "@/resources/memory_bedroom/Memory_comparation.jpg"
 
 
 

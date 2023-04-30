@@ -2,11 +2,11 @@
 
 import { Callout, Code, Img, Paragraph, Section, Title, Title3, Title4, UList, ImgTextAside, Hr, Quote, Color } from "@/components/MarkupWidgets/Tags";
 
-import image_reg_brk from "@/postsImages/memory_layout/register_naming_breakdown.svg"
-import image_stack1 from "@/postsImages/memory_layout/stack_layout.svg"
-import image_stack2 from "@/postsImages/memory_layout/stack_frame.svg"
-import image_stack3 from "@/postsImages/memory_layout/pointers_offsets.svg"
-import image_stack4 from "@/postsImages/memory_layout/stack_frames_pointers.svg"
+import image_reg_brk from "@/resources/memory_layout/register_naming_breakdown.svg"
+import image_stack1 from "@/resources/memory_layout/stack_layout.svg"
+import image_stack2 from "@/resources/memory_layout/stack_frame.svg"
+import image_stack3 from "@/resources/memory_layout/pointers_offsets.svg"
+import image_stack4 from "@/resources/memory_layout/stack_frames_pointers.svg"
 
 export default function Page(){
 
