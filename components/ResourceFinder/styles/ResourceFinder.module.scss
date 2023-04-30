@@ -29,6 +29,7 @@
     
     $borderRadius: 4px;
     border-radius: $borderRadius;
+    margin-bottom: 40px;
     
     & .div__header_search{
         & input{
@@ -74,3 +75,16 @@
     & a{text-decoration: none;}
 }
 
+
+
+
+@media (max-width:1100px){
+    .div__body{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:600px){
+    .div__body{
+        grid-template-columns: 1fr;
+    }
+}

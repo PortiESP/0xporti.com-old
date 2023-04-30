@@ -6,6 +6,7 @@
     justify-content: center;
     width: 100%;
     margin-bottom: 10px;
+    overflow: hidden;
 
     & .div__thumbnail{
         position: relative;
@@ -51,7 +52,7 @@
             font-weight: 500;
             width: 100%;
 
-            color:#94adff;
+            color:#ddd;
             background: #444;
         }
         & p{
