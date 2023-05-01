@@ -64,7 +64,7 @@ const elements = [
         description: "How DLMalloc heap implementation unlinks a free block",
         categories: ["Documentation"],
         tags: ["memory", "heap", "dlmalloc"],
-        url: "/assets/resources/memory_layout/Heap_unlink.svg",
+        url: "/assets/resources/memory_layout/Heap_Unlink.svg",
     },
     {
         title: "Heap DLMalloc Unlink exploit",
