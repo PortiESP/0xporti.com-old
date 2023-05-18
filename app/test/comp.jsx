@@ -72,7 +72,7 @@ export default function MindMap(props){
         {/* Menu */}
         <div className={sass.div__menu}>
             {/* Menu header */}
-            <div className={sass.div__menu_header} onClick={()=>setHide(old => !old)}>
+            <div className={[sass.div__menu_header, hide&&sass.status__hide].join(" ")} onClick={()=>setHide(old => !old)}>
                 <span className={sass.span__header_title}>Menu</span>
                 <span className={sass.span__header_icon}></span>
             </div>
@@ -80,9 +80,9 @@ export default function MindMap(props){
             <div className={[sass.div__menu_body, hide&&sass.state__hide].join(" ")}>
                 <hr/>
                 
-                <Toggle label="test" id="Ellipse1" initial={true}/>
-                <Toggle label="test" id="Ellipse2"/>
-                <Chamber label="Multiple" ids={["rect1", "rect2", "rect3", "rect4", "rect5", "rect6"]}/>
+                <Toggle label="test" ids={["Ellipse1",]} initial={true}/>
+                <Toggle label="test" ids={["Ellipse2",]}/>
+                <Chamber label="Multiple" idsGroups={[{label:"rect1", ids:["rect1"]}, {label:"rect2", ids:["rect2"]}, {label:"rect3", ids:["rect3"]}, {label:"rect4", ids:["rect4"]}, {label:"rect5", ids:["rect5"]}, {label:"rect6", ids:["rect6"]}]}/>
             </div>
         </div>
         {/* Zoom label */}
@@ -94,14 +94,20 @@ export default function MindMap(props){
 
 
 
-// PROPS {label, id, initial}
+function setIds(IDslist, state){
+    IDslist.map(id => document.getElementById(id).style.visibility = state ? "visible" : "hidden")
+}
+
+
+
+// PROPS {label="", ids[""], initial=false}
 function Toggle(props){
     
     const [state, setState] = useState(props.initial || false)
 
     useEffect(()=>{
-        console.log("Setting: ", props.id, " to ", state)
-        document.getElementById(props.id).style.visibility = state ? "visible" : "hidden"
+        console.log("Setting: ", props.ids, " to ", state)
+        setIds(props.ids, state)
     }, [state])
 
     return (<div className={[sass2.div__button_wrap, state ? sass2.state__on : sass2.state__off].join(" ")} title={props.label} onClick={()=>setState(old=>!old)}>
@@ -110,20 +116,20 @@ function Toggle(props){
     </div>)
 }
 
-// PROPS {label, ids, initial}
+// PROPS {label="", idsGroups[{label:"", ids:[""]}], initial=false}
 function Chamber(props){
     
-    const [selected, setSelected] = useState(props.ids[0])
+    const [selected, setSelected] = useState(0)
     const [state, setState] = useState(props.initial || false)
     
     // Selected listener
     useEffect(()=>{
-        console.log("Setting selected to ", selected)
+        console.log("Setting selected to ", props.idsGroups[selected])
 
         // Hide unselected
-        props.ids.map( id => document.getElementById(id).style.visibility = "hidden" ) 
+        props.idsGroups.map( group => setIds(group.ids, false) ) 
         // Show selected
-        document.getElementById(selected).style.visibility = "visible"
+        setIds(props.idsGroups[selected].ids, true)
         setState(true)
 
     }, [selected])
@@ -131,7 +137,7 @@ function Chamber(props){
     // State listener
     useEffect(()=>{
         console.log("Setting: ", selected, " to ", state)
-        document.getElementById(selected).style.visibility = state ? "visible" : "hidden"
+        setIds(props.idsGroups[selected].ids, state)
     }, [state])
 
     
@@ -140,12 +146,12 @@ function Chamber(props){
 
 
 
-    return (<div className={[sass2.div__chamber_wrap, state ? sass2.state__on : sass2.state__off].join(" ")} title={props.label} >
-        <div className={sass2.div__chamber_label}>{props.label}</div>
+    return (<div className={[sass2.div__chamber_wrap, state ? sass2.state__on : sass2.state__off].join(" ")} title={props.label}>
+        <div className={sass2.div__chamber_label} onClick={()=>setState(old=>!old)}>{props.label}</div>
         <div className={sass2.div__chamber_toggle} onClick={()=>setState(old=>!old)}>{state ? "ON" : "OFF"}</div>
         <select className={sass2.select__chamber_selector} onChange={e=>setSelected(e.target.value)}>
             {
-                props.ids.map( id => <option key={id} value={id}>{id}</option>)
+                props.idsGroups.map( (option,i) => <option key={i} value={i}>{option.label}</option>)
             }
         </select>
     </div>)

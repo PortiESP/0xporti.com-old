@@ -28,17 +28,22 @@
         width: 100%;
         padding: 10px;
 
+        
         & .span__header_title{
             font-style: italic;
-            color: #fff4;
+            color: #fffd;
         }
         & .span__header_icon{
             display: inline-block;
             width: 15px;
             height: 15px;
-            background: #fff4;
+            background: #fffd;
             border-radius: 15px;
         }
+        &.status__hide{
+            & .span__header_title{color: #fff4;}
+            & .span__header_icon{background: #fff4;}
+        }    
     }
 
 
