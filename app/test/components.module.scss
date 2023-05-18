@@ -1,0 +1,41 @@
+.div__button_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+
+    &.state__on .div__button_toggle{
+        color: green;
+    }
+    &.state__off .div__button_toggle{
+        color: red;
+    }
+}
+
+
+
+
+.div__chamber_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+
+    &.state__on .div__chamber_toggle{color: green;}
+    &.state__off .div__chamber_toggle{color: red;}
+
+    & .div__chamber_label{
+        width: 100%;
+    }
+    & .div__chamber_toggle{
+        padding: 0 10px;
+    }
+
+    & select{
+        padding: 4px;
+        border-radius: 4px;
+        background: #555;
+        font-family: inherit;
+        font-style: italic;
+    }
+}
