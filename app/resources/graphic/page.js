@@ -12,7 +12,7 @@ export default function Graphic(){
     <div className={sass.div__wrap}>
         <h2 className={sass.h2__title}>🔎 Resource Finder 🔎</h2>
         <div className={sass.div__resourcefinder}>
-            <ResourceFinder elements={elements} />
+            <ResourceFinder elements={elements} categories={["Documentation", "Interactive"]}/>
         </div>
     </div>
     </>

@@ -12,8 +12,8 @@ import { useState } from "react"
 function ResourceElement({data, root}){
     return (<Link href={`${root||""}${data.url}`}><div className={sassE.div__resource}>
         <div className={sassE.div__thumbnail}>
-            <Image src={data.image ||data.url} fill alt="thumbnail blur"/>
-            <Image src={data.image ||data.url} fill alt="thumbnail"/>
+            <Image src={data.thumbnail ||data.url} fill alt="thumbnail blur"/>
+            <Image src={data.thumbnail ||data.url} fill alt="thumbnail"/>
         </div>
         <div className={sassE.div__data}>
             <h3>{data.title}</h3>
