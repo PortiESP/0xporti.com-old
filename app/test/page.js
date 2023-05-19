@@ -1,4 +1,4 @@
-import MindMap from "./comp";
+import MindMap from "@/components/MarkupWidgets/tags/MindMap"
 import sass from "./page.module.scss"
 
 
