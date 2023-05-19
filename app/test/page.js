@@ -1,11 +1,46 @@
 import MindMap from "./comp";
 import sass from "./page.module.scss"
 
+
+const controls = [
+    {
+        label: "test1",
+        type: "toggle",
+        title: "test title",
+        ids: ["Ellipse1", "Ellipse2"]
+    },
+    {
+        label: "test3",
+        type: "toggle",
+        title: "test title",
+        ids: ["Ellipse1"]
+    },
+    {
+        label: "test2",
+        type: "chamber",
+        idsGroups: [
+            {
+                label: "opt 1",
+                ids: ["rect1", "rect2"],
+            },
+            {
+                label: "opt 2",
+                ids: ["rect3", "rect4"]
+            },
+            {
+                label: "opt 3",
+                ids: ["rect5", "rect6"]
+            },
+        ]
+    },
+]
+
+
 export default function Page(){
     return (<>
         <div className={sass.div__wrap_frame}>
             <div className={sass.div__frame}>
-                <MindMap width={892} height={562}>
+                <MindMap width={892} height={562} controls={controls}>
                     <rect width="892" height="562" fill="#F5F5F5"/>
                     <g id="Frame 48">
                     <rect width="892" height="562" fill="black"/>

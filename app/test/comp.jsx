@@ -4,6 +4,9 @@ import sass from "./comp.module.scss"
 import sass2 from "./components.module.scss"
 import { useEffect, useState } from "react"
 
+
+
+// PROPS width=999, height=999, controls{label, title, type, initial, ids||idsGroups}
 export default function MindMap(props){
 
     const [hide, setHide] = useState(false)
@@ -24,6 +27,17 @@ export default function MindMap(props){
         setZoom(viewbox[2]/props.width)
 
     }
+
+    const controlsJSX = props.controls?.map(item => {
+        switch (item.type) {
+            case "toggle": return <Toggle label={item.label} title={item.title} ids={item.ids} initial={item.initial}/>
+                break;
+            case "chamber": return <Chamber label={item.label} title={item.title} idsGroups={item.idsGroups}/>
+                break;
+        }
+    })
+
+    console.log(props.controls, controlsJSX)
 
 
     const moveEvent = e => {
@@ -70,21 +84,23 @@ export default function MindMap(props){
             </svg>
         </div>
         {/* Menu */}
-        <div className={sass.div__menu}>
-            {/* Menu header */}
-            <div className={[sass.div__menu_header, hide&&sass.status__hide].join(" ")} onClick={()=>setHide(old => !old)}>
-                <span className={sass.span__header_title}>Menu</span>
-                <span className={sass.span__header_icon}></span>
+        {   controlsJSX &&
+            <div className={sass.div__menu}>
+                {/* Menu header */}
+                <div className={[sass.div__menu_header, hide&&sass.status__hide].join(" ")} onClick={()=>setHide(old => !old)}>
+                    <span className={sass.span__header_title}>Menu</span>
+                    <span className={sass.span__header_icon}></span>
+                </div>
+                {/* Menu items */}
+                    <div className={[sass.div__menu_body, hide&&sass.state__hide].join(" ")}>
+                        <hr/>
+                        
+                        {
+                            controlsJSX
+                        }
+                    </div>
             </div>
-            {/* Menu items */}
-            <div className={[sass.div__menu_body, hide&&sass.state__hide].join(" ")}>
-                <hr/>
-                
-                <Toggle label="test" ids={["Ellipse1",]} initial={true}/>
-                <Toggle label="test" ids={["Ellipse2",]}/>
-                <Chamber label="Multipleeeeeeeeeeeeeeeeee" idsGroups={[{label:"rect1", ids:["rect1"]}, {label:"rect2", ids:["rect2"]}, {label:"rect3", ids:["rect3"]}, {label:"rect4", ids:["rect4"]}, {label:"rect5", ids:["rect5"]}, {label:"rect6", ids:["rect6"]}]}/>
-            </div>
-        </div>
+        }
         {/* Zoom label */}
         <span className={sass.span__zoom} onClick={()=>{setZoom(1); setViewbox([0, 0, props.width, props.height])}}>
             {Math.round((1/zoom)*100)}%
@@ -150,7 +166,7 @@ function Chamber(props){
         <div className={sass2.div__chamber_label} onClick={()=>setState(old=>!old)}>{props.label}</div>
         <select className={sass2.select__chamber_selector} onChange={e=>setSelected(e.target.value)}>
             {
-                props.idsGroups.map( (option,i) => <option key={i} value={i}>{option.label}</option>)
+                props.idsGroups.map( (group,i) => <option key={i} value={i}>{group.label}</option>)
             }
         </select>
         <div className={sass2.icon__eye} onClick={()=>setState(old=>!old)}></div>
