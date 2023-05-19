@@ -1,32 +1,48 @@
 
 $label: #fff8;
 $hover: #fff2;
+$active: url("/assets/icons/eye-open.png");
+$unactive: url("/assets/icons/eye-closed.png");
 
-.div__button_wrap{
+
+// Common
+.icon__eye{
+    width: 30px;
+    height: 30px;
+}
+
+.state__on .icon__eye{
+    background: $active  center no-repeat;
+    background-size: 20px;
+    filter: invert(.6);
+}
+.state__off .icon__eye{
+    background: $unactive center no-repeat;
+    background-size: 20px;
+    filter: invert(.2);
+}
+
+
+// Button
+.div__toggle_wrap{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding:5px;
 
-    & .div__button_label{
+    & .div__toggle_label{
         color:$label;
+        max-width: 80%;
+        overflow: hidden;
     }
-
-    &.state__on .div__button_toggle{
-        color: green;
-    }
-    &.state__off .div__button_toggle{
-        color: red;
-    }
+    
 
     &:hover{
         background: $hover;
     }
 }
 
-
-
-
+// Select
 .div__chamber_wrap{
     display: flex;
     justify-content: space-between;
@@ -37,11 +53,9 @@ $hover: #fff2;
     &.state__off .div__chamber_toggle{color: red;}
     
     & .div__chamber_label{
-        width: 100%;
+        max-width: 40%;
+        overflow: hidden;
         color:$label;
-    }
-    & .div__chamber_toggle{
-        padding: 0 10px;
     }
     
     & select{
@@ -50,6 +64,7 @@ $hover: #fff2;
         background: #555;
         font-family: inherit;
         font-style: italic;
+        min-width: 40%;
     }
 
 

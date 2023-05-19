@@ -82,7 +82,7 @@ export default function MindMap(props){
                 
                 <Toggle label="test" ids={["Ellipse1",]} initial={true}/>
                 <Toggle label="test" ids={["Ellipse2",]}/>
-                <Chamber label="Multiple" idsGroups={[{label:"rect1", ids:["rect1"]}, {label:"rect2", ids:["rect2"]}, {label:"rect3", ids:["rect3"]}, {label:"rect4", ids:["rect4"]}, {label:"rect5", ids:["rect5"]}, {label:"rect6", ids:["rect6"]}]}/>
+                <Chamber label="Multipleeeeeeeeeeeeeeeeee" idsGroups={[{label:"rect1", ids:["rect1"]}, {label:"rect2", ids:["rect2"]}, {label:"rect3", ids:["rect3"]}, {label:"rect4", ids:["rect4"]}, {label:"rect5", ids:["rect5"]}, {label:"rect6", ids:["rect6"]}]}/>
             </div>
         </div>
         {/* Zoom label */}
@@ -100,7 +100,7 @@ function setIds(IDslist, state){
 
 
 
-// PROPS {label="", ids[""], initial=false}
+// PROPS {label="", ids[""], initial=false, title}
 function Toggle(props){
     
     const [state, setState] = useState(props.initial || false)
@@ -110,13 +110,13 @@ function Toggle(props){
         setIds(props.ids, state)
     }, [state])
 
-    return (<div className={[sass2.div__button_wrap, state ? sass2.state__on : sass2.state__off].join(" ")} title={props.label} onClick={()=>setState(old=>!old)}>
-        <div className={sass2.div__button_label}>{props.label}</div>
-        <div className={sass2.div__button_toggle}>{state ? "ON" : "OFF"}</div>
+    return (<div className={[sass2.div__toggle_wrap, state ? sass2.state__on : sass2.state__off].join(" ")} title={props.title || props.label} onClick={()=>setState(old=>!old)}>
+        <div className={sass2.div__toggle_label}>{props.label}</div>
+        <div className={sass2.icon__eye}></div>
     </div>)
 }
 
-// PROPS {label="", idsGroups[{label:"", ids:[""]}], initial=false}
+// PROPS {label="", idsGroups[{label:"", ids:[""]}], initial=false, title=""}
 function Chamber(props){
     
     const [selected, setSelected] = useState(0)
@@ -146,13 +146,13 @@ function Chamber(props){
 
 
 
-    return (<div className={[sass2.div__chamber_wrap, state ? sass2.state__on : sass2.state__off].join(" ")} title={props.label}>
+    return (<div className={[sass2.div__chamber_wrap, state ? sass2.state__on : sass2.state__off].join(" ")} title={props.title || props.label}>
         <div className={sass2.div__chamber_label} onClick={()=>setState(old=>!old)}>{props.label}</div>
-        <div className={sass2.div__chamber_toggle} onClick={()=>setState(old=>!old)}>{state ? "ON" : "OFF"}</div>
         <select className={sass2.select__chamber_selector} onChange={e=>setSelected(e.target.value)}>
             {
                 props.idsGroups.map( (option,i) => <option key={i} value={i}>{option.label}</option>)
             }
         </select>
+        <div className={sass2.icon__eye} onClick={()=>setState(old=>!old)}></div>
     </div>)
 }
