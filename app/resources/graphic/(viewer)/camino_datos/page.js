@@ -9,10 +9,12 @@ const controls = [
         title: "Selecciona la vista que se va a motrar",
         initial: true,
         idsGroups: [
+            // OPTION 0 - INTRODUCCION
             {
                 label: "Introduccion",
                 ids: ["vista_intro"]
             },
+            // OPTION 1 - EJEMPLO TIPO R
             {
                 label: "Ejemplo tipo R",
                 ids: ["vista_ejm_R"],
@@ -25,23 +27,23 @@ const controls = [
                         idsGroups: [
                             {
                                 label: "Paso 1",
-                                ids: ["Paso1_anotaciones", "Paso1_guias"]
+                                ids: ["R_paso1_anotaciones", "R_paso1_guias"]
                             },
                             {
                                 label: "Paso 2",
-                                ids: ["Paso2_anotaciones", "Paso2_guias"]
+                                ids: ["R_paso2_anotaciones", "R_paso2_guias"]
                             },
                             {
                                 label: "Paso 3",
-                                ids: ["Paso3_anotaciones", "Paso3_guias"]
+                                ids: ["R_paso3_anotaciones", "R_paso3_guias"]
                             },
                             {
                                 label: "Paso 4",
-                                ids: ["Paso4_anotaciones", "Paso4_guias"]
+                                ids: ["R_paso4_anotaciones", "R_paso4_guias"]
                             },
                             {
                                 label: "Paso 5",
-                                ids: ["Paso5_anotaciones", "Paso5_guias"]
+                                ids: ["R_paso5_anotaciones", "R_paso5_guias"]
                             },
                         ]
                     },
@@ -49,7 +51,49 @@ const controls = [
                         type: "toggle",
                         label: "Anotaciones",
                         title: "Show/Hide the informative boxes",
-                        ids: ["Anotaciones"],
+                        ids: ["R_anotaciones"],
+                        initial: true,
+                    },
+                ]
+            },
+            // OPTION 2 - EJEMPLO TIPO I
+            {
+                label: "Ejemplo tipo I",
+                ids: ["vista_ejm_I"],
+                controls: [
+                    {
+                        type: "chamber",
+                        label: "Pasos",
+                        title: "Selecciona el paso del camino de datos que quieres mostrar",
+                        initial: true,
+                        idsGroups: [
+                            {
+                                label: "Paso 1",
+                                ids: ["I_paso1_anotaciones", "I_paso1_guias"]
+                            },
+                            {
+                                label: "Paso 2",
+                                ids: ["I_paso2_anotaciones", "I_paso2_guias"]
+                            },
+                            {
+                                label: "Paso 3",
+                                ids: ["I_paso3_anotaciones", "I_paso3_guias"]
+                            },
+                            {
+                                label: "Paso 4",
+                                ids: ["I_paso4_anotaciones", "I_paso4_guias"]
+                            },
+                            {
+                                label: "Paso 5",
+                                ids: ["I_paso5_anotaciones", "I_paso5_guias"]
+                            },
+                        ]
+                    },
+                    {
+                        type: "toggle",
+                        label: "Anotaciones",
+                        title: "Show/Hide the informative boxes",
+                        ids: ["I_anotaciones"],
                         initial: true,
                     },
                 ]
