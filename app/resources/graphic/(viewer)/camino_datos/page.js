@@ -1,6 +1,9 @@
 import MindMap from "@/components/MarkupWidgets/tags/MindMap"
 import sass from "./page.module.scss"
-import SVGIMG from "./svg.jsx"
+import dynamic from "next/dynamic"
+
+
+const SVGIMG = dynamic(()=>import("./svg.jsx"))
 
 const controls = [
     {
@@ -108,7 +111,7 @@ export default function Page(){
         <div className={sass.div__wrap_frame}>
             <div className={sass.div__frame}>
                 <MindMap width={1532} height={1038} controls={controls}>
-                    {SVGIMG}
+                    <SVGIMG />
                 </MindMap>
             </div>
         </div>
